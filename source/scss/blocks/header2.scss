@@ -1,0 +1,115 @@
+.header {
+   position: relative;
+   background: transparent;
+   z-index: 1;
+   padding-top: 10px;
+   padding-bottom: 10px;
+}
+.header__main {
+   height: 60px/1440px * 100vw;
+   min-height: 60px;
+   display: flex;
+   align-items: center;
+   background: transparent;
+   position: relative;
+   // @media (max-width: $md3+px) {
+   //    justify-content: center;
+   //    padding: 0 10px;
+   // }
+}
+
+.header__logo {
+   flex: 0 1 106px/1440px * 100vw;
+   // @media (max-width: $md3+px) {
+   //    order: 1;
+   // }
+}
+.header__menu {
+   flex: 1 1 auto;
+}
+.header__btn {
+   flex: 0 1 150px/1440px * 100vw;
+   height: 50px;
+   padding: 20px 30px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   text-transform: uppercase;
+   color: #ffffff;
+   background: #62d0df;
+   border-radius: 50px;
+   min-width: 150px;
+   max-width: 200px;
+   font-size: 14px;
+   &:active {
+      background: #020404;
+   }
+}
+
+.header-menu {
+   @media (max-width: $width-tablet+px) {
+      opacity: 0;
+      visibility: hidden;
+      position: absolute;
+      top: 0;
+      left: 0;
+      &._active {
+         padding-top: 11vh;
+         opacity: 1;
+         visibility: visible;
+         width: 100%;
+         height: 100vh;
+         overflow-y: scroll;
+         background: #25eaabbd;
+         padding: 0 10px;
+         .btn {
+            margin: 0 auto;
+         }
+      }
+   }
+}
+.header-menu__icon {
+   order: 0;
+}
+
+.header-menu__list {
+   display: flex;
+   justify-content: center;
+   // @media (max-width: $md3+px) {
+   //    flex-direction: column;
+   //    justify-content: space-evenly;
+   //    align-items: center;
+   //    overflow-y: scroll;
+   //    height: 80%;
+   // }
+}
+.header-menu__li {
+   &:hover .header-menu__link::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: #22356f;
+      // border-bottom: 2px solid #22356f;
+      // @media (max-width: $md3+px) {
+      //    display: none;
+      // }
+   }
+}
+.header-menu__link {
+   position: relative;
+   display: inline-block;
+   padding: 5px 15px;
+   // font-size: 3vh;
+   font-size: clamp(20px, 3vw, 36px);
+   color: #22356f;
+
+   // @media (max-width: $md3+px) {
+   //    // font-size: 3vmax;
+   //    &:active {
+   //       opacity: 0.5;
+   //    }
+   // }
+}

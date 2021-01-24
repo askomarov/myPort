@@ -1,0 +1,41 @@
+// animation: -name -duration -timing-function -delay -iteration-count -direction;
+
+@keyframes colorChange {
+  0% {
+    background: radial-gradient(
+      circle,
+      rgba(246, 173, 173, 1) 0%,
+      rgba(190, 109, 109, 1) 25%,
+      rgba(166, 57, 57, 1) 50%,
+      rgba(119, 27, 27, 1) 100%
+    );
+  }
+  25% {
+    background: radial-gradient(
+      circle,
+      rgba(250, 165, 123, 1) 0%,
+      rgba(190, 132, 109, 1) 25%,
+      rgba(166, 90, 57, 1) 50%,
+      rgba(77, 40, 2, 1) 100%
+    );
+  }
+  50% {
+    background: radial-gradient(
+      circle,
+      rgba(250, 208, 123, 1) 0%,
+      rgba(190, 169, 109, 1) 25%,
+      rgba(166, 134, 57, 1) 50%,
+      rgba(136, 122, 21, 1) 100%
+    );
+  }
+  100% {
+    background: radial-gradient(
+      circle,
+      rgba(242, 240, 57, 1) 0%,
+      rgba(200, 195, 88, 1) 25%,
+      rgba(208, 186, 35, 1) 50%,
+      rgba(171, 164, 17, 1) 100%
+    );
+  }
+}
+

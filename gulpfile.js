@@ -74,8 +74,7 @@ exports.images = images;
 // HTMl
 const html = (params) => {
   return gulp.src("source/*.html")
-    .pipe(fileinclude(
-    ))
+    .pipe(fileinclude())
     .pipe(htmlmin({
       collapseWhitespace: true,
       removeComments: true
@@ -146,9 +145,12 @@ const watcher = () => {
 exports.watcher = watcher;
 
 //build
-const build = gulp.series(clean, copy, gulp.parallel(html, styles, scripts, sprite));
+const build = gulp.series(
+  clean, gulp.parallel(
+    html, styles, scripts, sprite), gulp.series(copy));
 exports.build = build;
 
-let watch = gulp.series(build, gulp.parallel(watcher, server));
-exports.watch = watch;
-exports.default = watch;
+
+exports.default = gulp.series(
+  build, server, watcher
+);

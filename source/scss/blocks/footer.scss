@@ -1,0 +1,43 @@
+.footer {
+  padding: 25px 0;
+}
+.footer__container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  align-items: center;
+  justify-items: center;
+}
+
+.footer__logo {
+}
+
+.footer__social {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+}
+.footer__social-item {
+  &:hover {
+    .footer__social-link {
+      fill: rgba($color: #000000, $alpha: 0.7);
+      filter: drop-shadow(0px 0px 5px white);
+    }
+  }
+}
+.footer__social-link {
+  fill: black;
+}
+.footer__social-link--vk {
+}
+.footer__social-link--inst {
+}
+.footer__social-link--fb {
+}
+.footer__copy {
+}
+.footer__academy-logo {
+}
+.footer__text {
+}
