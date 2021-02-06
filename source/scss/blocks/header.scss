@@ -1,0 +1,121 @@
+.header {
+  position: relative;
+}
+.header--no-js {
+}
+.header__body {
+  padding-top: 12px;
+  padding-bottom: 9px;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  column-gap: 10px;
+
+  @media (min-width: $width-tablet+px) {
+    grid-template-columns: 1fr 3fr 1fr;
+  }
+}
+
+.header__logo {
+  @media (min-width: $width-desktop+px) {
+    justify-self: start;
+  }
+}
+
+.header-menu__toggle {
+  display: none;
+
+  @media (max-width: $width-tablet+px) {
+    display: block;
+    padding: 5px;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+  }
+}
+
+.site-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+
+  @media (max-width: $width-tablet+px) {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    z-index: -1;
+    background-color: #d9f0f7;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+
+    &--open {
+      visibility: visible;
+      opacity: 1;
+      transform: translateX(0);
+      z-index: 20;
+    }
+  }
+}
+
+.site-list__item {
+  margin-right: 9px;
+  display: flex;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.site-list__link {
+  padding: 5px;
+  font-size: 16px;
+  line-height: 19px;
+  color: #4f4f4f;
+  cursor: pointer;
+}
+
+.header-menu__actions {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  gap: 10px;
+
+  @media (min-width: $width-tablet+px) {
+    justify-self: end;
+  }
+}
+
+.header-actions__item {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.header-actions__link {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 23px;
+  color: #3e0d41;
+  span {
+    white-space: nowrap;
+  }
+  svg {
+    margin-right: 10px;
+  }
+  &:hover {
+    fill: #30a3e6;
+    color: #30a3e6;
+  }
+  @media (min-width: $width-desktop+px) {
+    svg {
+      width: 32px;
+      height: 32px;
+    }
+  }
+}

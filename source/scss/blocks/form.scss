@@ -1,0 +1,93 @@
+
+.form {
+  width: 100%;
+  padding: 36px 32px;
+  background: rgba(51, 51, 51, 0.6);
+  border-radius: 6px;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.form__title {
+  font-weight: normal;
+  font-size: 26px;
+  line-height: 26px;
+  margin-bottom: 46px;
+}
+
+.form__label {
+  position: relative;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.02em;
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 12px;
+  margin-bottom: 20px;
+
+  &:last-of-type {
+    margin-bottom: 34px;
+  }
+}
+
+.form__input {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 16px;
+  color: #000000;
+  height: 48px;
+  padding: 0 12px;
+  border-radius: 4px;
+  border: 1px solid #fcfae1;
+
+  &::placeholder {
+    color: rgba($color: #000000, $alpha: 0.5);
+  }
+}
+
+.form__input--error {
+  box-shadow: inset 0 0 10px 0 red;
+
+  + .form__error-wrap {
+    display: block;
+  }
+}
+
+.form__error-wrap {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: auto;
+  z-index: 10;
+  bottom: 3px;
+  left: 0;
+  color: red;
+  text-align: center;
+}
+
+.form__btn-submit {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #ffffff;
+  height: 48px;
+  margin-bottom: 30px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  background: linear-gradient(91.17deg, #eb5d56 0.01%, #390a40 100.01%);
+  border-radius: 4px;
+}
+
+.form__personal-data-text {
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 18px;
+  letter-spacing: 0.5px;
+}
+
+.form__personal-data-link {
+  color: #ffffff;
+  cursor: pointer;
+}

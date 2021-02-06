@@ -1,7 +1,7 @@
 $min-width: 320;
 $max-width: 1300;
 $width-desktop: 1300;
-$width-tablet: 767.98;
+$width-tablet: 768.98;
 $width-mobile: 374.98;
 
 .container {
@@ -10,7 +10,7 @@ $width-mobile: 374.98;
   padding-left: 20px;
   padding-right: 20px;
   margin: 0 auto;
-  
+
   @media (min-width: $width-mobile+px) {
     padding-left: 50px;
     padding-right: 50px;
