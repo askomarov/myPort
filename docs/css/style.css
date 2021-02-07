@@ -429,7 +429,12 @@ h6 {
     left: 0;
     z-index: 1;
     width: 100%;
-    height: auto; }
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover; }
+
+.catalog-item__img--pognali img {
+  height: auto; }
 
 .catalog-item__hover-menu {
   background: var(--basic-gray);
@@ -444,7 +449,7 @@ h6 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 26px 0 44px 0; }
+  padding: 26px 20px 44px; }
   @media (max-width: 768.98px) {
     .catalog-item__hover-menu {
       z-index: 5; } }
@@ -472,8 +477,7 @@ h6 {
   font-weight: normal;
   font-size: 16px;
   line-height: 18px;
-  color: var(--contact-text);
-  max-width: 255px;
+  color: var(--basic-black);
   text-align: center; }
 
 .catalog-item__btn {
