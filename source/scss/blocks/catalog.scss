@@ -151,3 +151,15 @@
   text-transform: uppercase;
   color: var(--basic-white);
 }
+
+.catalog-item__repo-link{
+  color: inherit;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+position: relative;
+overflow: hidden;
+outline: 1px solid black;
+
+}
