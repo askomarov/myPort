@@ -104,7 +104,7 @@ exports.styles = styles;  //говорим галпу что есть тепер
 
 //javascript
 const scripts = () => {
-  return gulp.src('source/js/*.js')
+  return gulp.src('source/js/main.js')
     .pipe(terser())
     .pipe(rename({
       suffix: '.min'

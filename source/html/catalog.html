@@ -1,15 +1,56 @@
 <section class="catalog">
   <div class="catalog__container container">
-    <h2 class="catalog__title main-title">Каталог выполненных работ</h2>
 
+    <div class="catalog__filter catalog-filter">
+      <h2 class="catalog-filter__title main-title">Каталог выполненных работ</h2>
+      <form action="" class="catalog-filter__form">
+        <input class="catalog-filter__checkbox visually-hidden" type="checkbox" name="html-css" value="html-css"
+          id="html-css" checked>
+        <label class="catalog-filter__label" for="html-css">
+          <svg width="50" height="50">
+            <use xlink:href="#html"></use>
+          </svg>
+
+        </label>
+        <input class="catalog-filter__checkbox visually-hidden" type="checkbox" name="javascript" value="javascript"
+          id="javascript">
+        <label class="catalog-filter__label" for="javascript">
+          <svg width="50" height="50">
+            <use xlink:href="#logos_javascript"></use>
+          </svg>
+        </label>
+
+        <input class="catalog-filter__checkbox visually-hidden" type="checkbox" name="vue-js" value="vue-js" id="vue-js"
+          checked>
+        <label class="catalog-filter__label" for="vue-js">
+          <svg width="50" height="50">
+            <use xlink:href="#icon-vue"></use>
+          </svg>
+        </label>
+
+        <input class="catalog-filter__checkbox visually-hidden" type="checkbox" name="check-all" value="check-all"
+          id="check-all" checked>
+        <label class="catalog-filter__label" for="check-all">
+          <svg id="icon-check-all" viewBox="0 0 16 16" width="50" height="50">
+            <path class="icon-check-all__wrap"
+              d="M12.085 2.206H1.46075C1.07366 2.20626 0.702509 2.36019 0.428843 2.63395C0.155177 2.90771 0.00138174 3.27891 0.00124931 3.666V14.2905C0.0013156 14.6776 0.155105 15.0488 0.4288 15.3224C0.702495 15.5961 1.07369 15.7499 1.46075 15.75H12.085C12.4721 15.7499 12.8433 15.5961 13.117 15.3224C13.3907 15.0486 13.5445 14.6774 13.5445 14.2902V3.666C13.5444 3.27889 13.3907 2.90765 13.117 2.63387C12.8433 2.3601 12.4721 2.2062 12.085 2.206ZM12.765 13.571C12.7651 13.7406 12.7317 13.9086 12.6669 14.0653C12.602 14.2221 12.5069 14.3645 12.387 14.4845C12.2671 14.6044 12.1247 14.6996 11.968 14.7646C11.8113 14.8295 11.6434 14.863 11.4737 14.863H2.07325C1.90356 14.8631 1.73553 14.8297 1.57874 14.7648C1.42196 14.6999 1.27951 14.6047 1.15952 14.4847C1.03953 14.3647 0.944369 14.2223 0.879463 14.0655C0.814557 13.9087 0.781184 13.7407 0.781249 13.571V4.17075C0.781249 4.00109 0.81467 3.8331 0.879602 3.67636C0.944534 3.51962 1.03971 3.37721 1.15968 3.25726C1.27966 3.1373 1.42209 3.04216 1.57884 2.97726C1.73559 2.91235 1.90359 2.87897 2.07325 2.879H11.4737C11.8162 2.8792 12.1446 3.01537 12.3868 3.25759C12.6289 3.49982 12.7649 3.82826 12.765 4.17075V13.571"
+              fill="#344549" />
+            <path class="icon-check-all__arrow"
+              d="M14.015 0.911249C12.0898 2.57825 10.3235 4.34675 8.83175 6.41625C8.17375 7.32925 7.6565 8.3435 7.1785 9.358C6.95375 9.8355 6.8195 10.3322 6.69325 10.829C5.775 9.9755 4.88125 9.09775 3.87325 8.339C3.1545 7.79825 0.742001 9.494 1.5845 10.1285C3.0945 11.2645 4.352 12.6787 5.8195 13.8652C6.434 14.361 7.79575 13.285 8.11475 12.8327C9.165 11.3452 9.3085 9.5255 10.0743 7.90225C11.2433 5.42 13.316 3.38225 15.3618 1.60975C16.8893 0.287749 15.0438 0.0204986 14.0155 0.910249"
+              fill="#37B34A" />
+          </svg>
+
+        </label>
+      </form>
+    </div>
     <ul class="catalog-grid">
       <!-- погнали -->
-      <li class="catalog-item">
+      <li class="catalog-item active" data-filter="html-css">
         <div class="catalog-item__top"><span class="catalog-item__top-decor"></span></div>
         <div class="catalog-item__img catalog-item__img--pognali">
           <picture>
             <source type="image/webp" srcset="img/img-pognali@1xdesktop.webp">
-            <img src="img/img-pognali@1xdesktop.png" srcset="" alt="Превью сайт повышения квалификации" width="358"
+            <img src="img/img-pognali@1xdesktop.jpg" srcset="" alt="Превью сайт повышения квалификации" width="358"
               height="578" />
           </picture>
         </div>
@@ -23,10 +64,16 @@
           <a href="https://askomarov.github.io/pognaliHtmlAcademy/" target="_blank"
             class="catalog-item__btn main-btn">view
             project</a>
+            <a class="catalog-item__repo-link" href="https://github.com/askomarov/pognaliHtmlAcademy" target="_blank">
+              <svg width="30" height="30">
+                <use xlink:href="#icon-reposit"></use>
+              </svg>
+              <span>Repository</span>
+            </a>
         </div>
       </li>
       <!-- кат-энерджи -->
-      <li class="catalog-item">
+      <li class="catalog-item active" data-filter="html-css">
         <div class="catalog-item__top"><span class="catalog-item__top-decor"></span></div>
         <div class="catalog-item__img">
           <picture>
@@ -44,15 +91,21 @@
             адаптивных изображений</p>
           <a href="https://askomarov.github.io/CatFromAcademy/index.html" target="_blank"
             class="catalog-item__btn main-btn">view project</a>
+          <a class="catalog-item__repo-link" href="https://github.com/askomarov/CatFromAcademy" target="_blank">
+            <svg width="30" height="30">
+              <use xlink:href="#icon-reposit"></use>
+            </svg>
+            <span>Repository</span>
+          </a>
         </div>
       </li>
       <!-- глэйси -->
-      <li class="catalog-item">
+      <li class="catalog-item active" data-filter="html-css">
         <div class="catalog-item__top"><span class="catalog-item__top-decor"></span></div>
         <div class="catalog-item__img">
           <picture>
             <source type="image/webp" srcset="img/img-gllacy.webp 1x, img/img-gllacy@2x.webp 2x">
-            <img src="img/img-gllacy.png" srcset="img/img-gllacy@2x.png" alt="Превью сайта салон красоты Barber-shop"
+            <img src="img/img-gllacy.png" srcset="img/img-gllacy@2x.jpg" alt="Превью сайта салон красоты Barber-shop"
               width="358" height="578" />
           </picture>
         </div>
@@ -63,10 +116,16 @@
           <p class="catalog-item__desc">Двустраничный, неадаптивный, но красочный сайт</p>
           <a href="https://askomarov.github.io/1422707-gllacy-29/" target="_blank"
             class="catalog-item__btn main-btn">view project</a>
+          <a class="catalog-item__repo-link" href="https://github.com/askomarov/1422707-gllacy-29" target="_blank">
+            <svg width="30" height="30">
+              <use xlink:href="#icon-reposit"></use>
+            </svg>
+            <span>Repository</span>
+          </a>
         </div>
       </li>
       <!-- седона -->
-      <li class="catalog-item">
+      <li class="catalog-item active" data-filter="html-css">
         <div class="catalog-item__top"><span class="catalog-item__top-decor"></span></div>
         <div class="catalog-item__img">
           <picture>
@@ -81,6 +140,12 @@
           <p class="catalog-item__desc">Адаптивный трех-страничный сайт. С использованием gulp, препроцессоров</p>
           <a href="https://askomarov.github.io/mySedonaByHtmlAcademy/" target="_blank"
             class="catalog-item__btn main-btn">view project</a>
+          <a class="catalog-item__repo-link" href="https://github.com/askomarov/mySedonaByHtmlAcademy" target="_blank">
+            <svg width="30" height="30">
+              <use xlink:href="#icon-reposit"></use>
+            </svg>
+            <span>Repository</span>
+          </a>
         </div>
       </li>
       <!-- пинк -->
@@ -102,7 +167,7 @@
         </div>
       </li> -->
       <!-- карточки с фильтром -->
-      <li class="catalog-item">
+      <li class="catalog-item active" data-filter="html-css">
         <div class="catalog-item__top"><span class="catalog-item__top-decor"></span></div>
         <div class="catalog-item__img">
           <picture>
@@ -118,10 +183,16 @@
           <p class="catalog-item__desc">Пример списка товаров с кастомными элементами формы</p>
           <a href="https://askomarov.github.io/filter/" target="_blank" class="catalog-item__btn main-btn">view
             project</a>
+          <a class="catalog-item__repo-link" href="https://github.com/askomarov/filter" target="_blank">
+            <svg width="30" height="30">
+              <use xlink:href="#icon-reposit"></use>
+            </svg>
+            <span>Repository</span>
+          </a>
         </div>
       </li>
       <!-- расчет среднего Vue.js -->
-      <li class="catalog-item">
+      <li class="catalog-item active" data-filter="vue-js">
         <div class="catalog-item__top"><span class="catalog-item__top-decor"></span></div>
         <div class="catalog-item__img">
           <picture>
@@ -137,24 +208,33 @@
           <p class="catalog-item__desc">Форма подсчета с использованием фреймворка Vue.js</p>
           <a href="https://askomarov.github.io/filter/" target="_blank" class="catalog-item__btn main-btn">view
             project</a>
+          <a class="catalog-item__repo-link" href="https://github.com/askomarov/middleval" target="_blank">
+            <svg width="30" height="30">
+              <use xlink:href="#icon-reposit"></use>
+            </svg>
+            <span>Repository</span>
+          </a>
         </div>
       </li>
       <!-- kekstgramm -->
-      <li class="catalog-item">
+      <li class="catalog-item" data-filter="javascript">
         <div class="catalog-item__top"><span class="catalog-item__top-decor"></span></div>
         <div class="catalog-item__img">
           <picture>
             <source type="image/webp" srcset="">
-            <img src="img/kekstagram.png" srcset="" alt="Превью kekstagram" width="358" height="578" />
+            <img src="img/kekstagram.jpg" srcset="" alt="Превью kekstagram" width="358" height="578" />
           </picture>
         </div>
         <div class="catalog-item__hover-menu">
-          <a href="https://askomarov.github.io/kekstagramByHTMLAcademy/" target="_blank" class="catalog-item__title-link">
+          <a href="https://askomarov.github.io/kekstagramByHTMLAcademy/" target="_blank"
+            class="catalog-item__title-link">
             <h2 class="catalog-item__title">Кекстаграм</h2>
           </a>
           <p class="catalog-item__desc">Учебная работа с онлайн-курса по JavaScript</p>
-          <a href="https://askomarov.github.io/kekstagramByHTMLAcademy/" target="_blank" class="catalog-item__btn main-btn">заценить</a>
-          <a class="catalog-item__repo-link" href="https://github.com/askomarov/kekstagramByHTMLAcademy" target="_blank">
+          <a href="https://askomarov.github.io/kekstagramByHTMLAcademy/" target="_blank"
+            class="catalog-item__btn main-btn">заценить</a>
+          <a class="catalog-item__repo-link" href="https://github.com/askomarov/kekstagramByHTMLAcademy"
+            target="_blank">
             <svg width="30" height="30">
               <use xlink:href="#icon-reposit"></use>
             </svg>
@@ -163,22 +243,24 @@
         </div>
       </li>
       <!-- keksobooking -->
-      <li class="catalog-item">
+      <li class="catalog-item" data-filter="javascript">
         <div class="catalog-item__top"><span class="catalog-item__top-decor"></span></div>
         <div class="catalog-item__img">
           <picture>
             <source type="image/webp" srcset="">
-            <img src="img/keksobooking.png" srcset="" alt="Превью Кексобукинг" width="358" height="578" />
+            <img src="img/keksobooking.jpg" srcset="" alt="Превью Кексобукинг" width="358" height="578" />
           </picture>
         </div>
         <div class="catalog-item__hover-menu">
-          <a href="https://askomarov.github.io/keksobookingByHTMLAcademy/" target="_blank" class="catalog-item__title-link">
+          <a href="https://askomarov.github.io/keksobookingByHTMLAcademy/" target="_blank"
+            class="catalog-item__title-link">
             <h2 class="catalog-item__title">Кексобукинг</h2>
           </a>
           <p class="catalog-item__desc">Учебная работа с онлайн-курса по JavaScript</p>
           <a href="https://askomarov.github.io/kekstagramByHTMLAcademy/" target="_blank"
             class="catalog-item__btn main-btn">посмотреть</a>
-          <a class="catalog-item__repo-link" href="https://askomarov.github.io/keksobookingByHTMLAcademy/" target="_blank">
+          <a class="catalog-item__repo-link" href="https://askomarov.github.io/keksobookingByHTMLAcademy/"
+            target="_blank">
             <svg width="30" height="30">
               <use xlink:href="#icon-reposit"></use>
             </svg>
