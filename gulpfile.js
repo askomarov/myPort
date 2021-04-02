@@ -139,7 +139,7 @@ function cb() {
 // Watcher
 const watcher = () => {
   gulp.watch(["source/**/*.html"], gulp.series("html"));
-  gulp.watch(["source/js/**/*.js"], gulp.series("scripts"));
+  // gulp.watch(["source/js/**/*.js"], gulp.series("scripts"));
   gulp.watch(["source/scss/**/*.scss"], gulp.series("styles"));
 };
 exports.watcher = watcher;
@@ -147,7 +147,10 @@ exports.watcher = watcher;
 //build
 const build = gulp.series(
   clean, gulp.parallel(
-    html, styles, scripts, sprite), gulp.series(copy));
+    html,
+    styles,
+    // scripts,
+    sprite), gulp.series(copy));
 exports.build = build;
 
 
