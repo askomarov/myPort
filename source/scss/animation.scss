@@ -39,7 +39,7 @@
   }
 }
 
-@keyframes colorChangeAnimista {
+@keyframes colorChangeAnimistaLight {
   0% {
     background: #19dcea;
   }
@@ -54,6 +54,23 @@
   }
   100% {
     background: #3bd80d;
+  }
+}
+@keyframes colorChangeAnimistaDark {
+  0% {
+    background: #107f87;
+  }
+  25% {
+    background: #7520a7;
+  }
+  50% {
+    background: #ea2222;
+  }
+  75% {
+    background: #5e4905;
+  }
+  100% {
+    background: #207606;
   }
 }
 

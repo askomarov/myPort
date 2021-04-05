@@ -5,6 +5,9 @@
   grid-template-columns: 1fr;
   justify-items: center;
   align-items: center;
+  @media (orientation: landscape) and (max-height: 480px) {
+    height: auto;
+  }
 }
 .promo__container {
   display: grid;
@@ -18,7 +21,7 @@
   height: 250px;
   position: relative;
   overflow: hidden;
-  box-shadow: 0 0 4px 0 black, 0 10px 100px #fff, 0 10px 200px #eee;
+  box-shadow: var(--shadow);
   margin-bottom: 10px;
 
   @media (min-width: $width-desktop+px) {
