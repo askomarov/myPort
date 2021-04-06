@@ -1,3 +1,4 @@
+const path = require('path');
 const gulp = require("gulp");
 const plumber = require("gulp-plumber"); //обработчик ошибок
 const sourcemap = require("gulp-sourcemaps"); //добавляет карты кода для css
@@ -18,6 +19,14 @@ const cheerio = require('gulp-cheerio');
 const del = require("del");
 const terser = require("gulp-terser"); //обратка и минифик файлов js
 const { series, parallel } = require('gulp');
+
+const ghPages = require('gh-pages');
+const webpack = require('webpack-stream');
+// gh-pages
+const deploy = (cb) => {
+  ghPages.publish(path.join(process.cwd(), './docs'), cb);
+};
+exports.deploy = deploy;
 
 // Server
 const server = (done) => {
@@ -105,10 +114,11 @@ exports.styles = styles;  //говорим галпу что есть тепер
 //javascript
 const scripts = () => {
   return gulp.src('source/js/main.js')
-    .pipe(terser())
-    .pipe(rename({
-      suffix: '.min'
-    }))
+    // .pipe(terser())
+    // .pipe(rename({
+    //   suffix: '.min'
+    // }))
+    .pipe(webpack(require('./webpack.config.js')))
     .pipe(gulp.dest('docs/js'))
     .pipe(sync.stream());
 }
@@ -139,7 +149,7 @@ function cb() {
 // Watcher
 const watcher = () => {
   gulp.watch(["source/**/*.html"], gulp.series("html"));
-  // gulp.watch(["source/js/**/*.js"], gulp.series("scripts"));
+  gulp.watch(["source/js/**/*.js"], gulp.series("scripts"));
   gulp.watch(["source/scss/**/*.scss"], gulp.series("styles"));
 };
 exports.watcher = watcher;
@@ -149,7 +159,7 @@ const build = gulp.series(
   clean, gulp.parallel(
     html,
     styles,
-    // scripts,
+    scripts,
     sprite), gulp.series(copy));
 exports.build = build;
 

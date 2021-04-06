@@ -6,6 +6,7 @@
   align-items: center;
   justify-items: center;
   gap: 20px;
+
   @media (min-width: $width-tablet+px) {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   }
@@ -18,9 +19,15 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: flex-start;
-  gap: 20px;
+  justify-content: space-around;
+  width: 100%;
+
+  @media (min-width: $width-tablet+px) {
+    gap: 20px;
+    width: auto;
+  }
 }
+
 .footer__social-item {
   &:hover {
     .footer__social-link {
@@ -29,18 +36,7 @@
     }
   }
 }
+
 .footer__social-link {
   fill: black;
-}
-.footer__social-link--vk {
-}
-.footer__social-link--inst {
-}
-.footer__social-link--fb {
-}
-.footer__copy {
-}
-.footer__academy-logo {
-}
-.footer__text {
 }

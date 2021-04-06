@@ -1,6 +1,4 @@
 .page {
-  display: grid;
-  grid-template-rows: min-content 1fr min-content;
   animation: colorChange 40s linear infinite alternate both;
   // animation: colorChangeAnimistaDark 20s linear infinite alternate both;
   animation-direction: alternate;
