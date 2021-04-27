@@ -1,6 +1,6 @@
 .promo {
   padding: 20px 0;
-  height: 75vh;
+  min-height: 75vh;
   display: grid;
   grid-template-columns: 1fr;
   justify-items: center;
@@ -13,6 +13,7 @@
   display: grid;
   grid-template-columns: 1fr;
   justify-items: center;
+  text-align: center;
 }
 .promo__img-wrap {
   background-color: blanchedalmond;
@@ -54,6 +55,9 @@
   font-size: 36px;
   line-height: 42px;
   z-index: 1;
+  @media (min-width: $width-tablet+px) {
+    max-width: 350px;
+  }
 }
 .promo__text {
   font-weight: bold;

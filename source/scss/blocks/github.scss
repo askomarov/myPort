@@ -1,6 +1,6 @@
 .github {
   background: black;
-  padding: 60px 0;
+  padding: 20px 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -14,6 +14,9 @@
       height: 150px;
       width: 150px;
     }
+  }
+  @media (min-width: $width-mobile+px) {
+    padding: 60px 0;
   }
 }
 .github__link {
