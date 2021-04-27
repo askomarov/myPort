@@ -801,7 +801,7 @@ h6 {
     left: 0;
     z-index: 1;
     width: 100%;
-    height: 100%;
+    height: auto;
     -o-object-fit: cover;
        object-fit: cover; }
 
@@ -980,7 +980,7 @@ input[id="check-all"]:checked + label .icon-check-all__arrow {
 
 .promo {
   padding: 20px 0;
-  height: 75vh;
+  min-height: 75vh;
   display: grid;
   grid-template-columns: 1fr;
   justify-items: center;
@@ -992,7 +992,8 @@ input[id="check-all"]:checked + label .icon-check-all__arrow {
 .promo__container {
   display: grid;
   grid-template-columns: 1fr;
-  justify-items: center; }
+  justify-items: center;
+  text-align: center; }
 
 .promo__img-wrap {
   background-color: blanchedalmond;
@@ -1029,6 +1030,9 @@ input[id="check-all"]:checked + label .icon-check-all__arrow {
   font-size: 36px;
   line-height: 42px;
   z-index: 1; }
+  @media (min-width: 767.98px) {
+    .promo__title {
+      max-width: 350px; } }
 
 .promo__text {
   font-weight: bold;
@@ -1043,7 +1047,7 @@ input[id="check-all"]:checked + label .icon-check-all__arrow {
 
 .github {
   background: black;
-  padding: 60px 0;
+  padding: 20px 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1055,6 +1059,9 @@ input[id="check-all"]:checked + label .icon-check-all__arrow {
     box-shadow: inset 0 0 20px black;
     height: 150px;
     width: 150px; }
+  @media (min-width: 374.98px) {
+    .github {
+      padding: 60px 0; } }
 
 .github__link {
   display: flex;
@@ -1082,7 +1089,7 @@ input[id="check-all"]:checked + label .icon-check-all__arrow {
   border-radius: 10px;
   padding: 20px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
   gap: 20px;
   margin: 0 auto; }
   @media (min-width: 767.98px) {
@@ -1099,9 +1106,15 @@ input[id="check-all"]:checked + label .icon-check-all__arrow {
   justify-content: center;
   text-transform: uppercase;
   font-weight: 500;
-  font-size: 0;
   position: relative;
-  overflow: hidden; }
+  overflow: hidden;
+  position: relative; }
+  .skills__item span {
+    color: var(--text-color);
+    transition: all 0.3s ease-in-out 0s;
+    position: absolute;
+    bottom: -1em;
+    text-shadow: 0 0 1px black; }
   .skills__item:after {
     content: "";
     position: absolute;
@@ -1124,6 +1137,8 @@ input[id="check-all"]:checked + label .icon-check-all__arrow {
     transform: skewX(-10deg);
     transition: all 0.7s ease 0.3s;
     box-shadow: 0 0 60px 5px white; }
+  .skills__item:hover span {
+    bottom: 1em; }
   .skills__item:hover:after {
     left: 110%; }
   .skills__item:hover:before {
