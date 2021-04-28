@@ -456,6 +456,26 @@ h6 {
     animation-timing-function: ease-out;
     opacity: 1; } }
 
+@-webkit-keyframes swing-in-bottom-fwd {
+  0% {
+    transform: translateY(100%);
+    transform-origin: bottom;
+    opacity: 0; }
+  100% {
+    transform: translateY(0);
+    transform-origin: bottom;
+    opacity: 1; } }
+
+@keyframes swing-in-bottom-fwd {
+  0% {
+    transform: translateY(100%);
+    transform-origin: bottom;
+    opacity: 0; }
+  100% {
+    transform: translateY(0);
+    transform-origin: bottom;
+    opacity: 1; } }
+
 .waves {
   position: relative;
   width: 100%;
@@ -1091,11 +1111,20 @@ input[id="check-all"]:checked + label .icon-check-all__arrow {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
   gap: 20px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  opacity: 0;
+  transform: skewX(315deg) translateX(-100%);
+  transition: all 0.5s ease-in-out 0s; }
   @media (min-width: 767.98px) {
     .skills__list {
       -moz-column-gap: 50px;
            column-gap: 50px; } }
+  .skills__list.magick {
+    opacity: 1;
+    transform: translateX(0); }
+    .skills__list.magick .skills__item {
+      -webkit-animation: swing-in-bottom-fwd 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) both 0.5s;
+              animation: swing-in-bottom-fwd 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) both 0.5s; }
 
 .skills__item {
   background: #eaeaea8a;

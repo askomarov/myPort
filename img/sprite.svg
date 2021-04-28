@@ -3,23 +3,23 @@
 <rect width="128" height="29" fill="white"/>
 </clipPath>
 
-<filter id="filter0_di" x="0" y="0" width="93" height="94" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-<feFlood flood-opacity="0" result="BackgroundImageFix"/>
-<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
-<feMorphology radius="1" operator="dilate" in="SourceAlpha" result="effect1_dropShadow"/>
-<feOffset dx="1" dy="3"/>
-<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0"/>
-<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
-<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
-<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-<feMorphology radius="10" operator="erode" in="SourceAlpha" result="effect2_innerShadow"/>
-<feOffset dx="13" dy="22"/>
-<feGaussianBlur stdDeviation="2"/>
-<feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
-<feColorMatrix type="matrix" values="0 0 0 0 0.795833 0 0 0 0 0.722882 0 0 0 0 0.722882 0 0 0 1 0"/>
-<feBlend mode="normal" in2="shape" result="effect2_innerShadow"/>
-</filter>
-</defs><symbol id="aslogo" viewBox="0 0 250 70">
+    <filter id="filter0_di" x="0" y="0" width="93" height="94" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
+      <feMorphology radius="1" operator="dilate" in="SourceAlpha" result="effect1_dropShadow"/>
+      <feOffset dx="1" dy="3"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feMorphology radius="10" operator="erode" in="SourceAlpha" result="effect2_innerShadow"/>
+      <feOffset dx="13" dy="22"/>
+      <feGaussianBlur stdDeviation="2"/>
+      <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0.795833 0 0 0 0 0.722882 0 0 0 0 0.722882 0 0 0 1 0"/>
+      <feBlend mode="normal" in2="shape" result="effect2_innerShadow"/>
+    </filter>
+  </defs><symbol id="aslogo" viewBox="0 0 250 70">
 <path d="M22.3416 50.2032H10.0586L7.29999 60.775H3.31305L14.5087 20.2682H17.8916L29.1073 60.775H25.1405L22.3416 50.2032ZM11.2265 45.8075H21.1939L16.2001 26.8617L11.2265 45.8075Z" fill="black"/>
 <path d="M41.6924 42.7194C38.3767 41.4026 35.9603 39.789 34.4434 37.8786C32.9399 35.9497 32.1882 33.5757 32.1882 30.7566C32.1882 27.5665 33.1077 24.9328 34.9468 22.8555C36.7993 20.7597 39.2022 19.7118 42.1555 19.7118C44.1691 19.7118 45.9612 20.2497 47.5318 21.3254C49.1159 22.4011 50.3375 23.8849 51.1966 25.7767C52.0692 27.6685 52.5055 29.7365 52.5055 31.9807H48.6192C48.6192 29.5325 48.0554 27.6129 46.9278 26.2218C45.8001 24.8122 44.2094 24.1075 42.1555 24.1075C40.2493 24.1075 38.7592 24.6917 37.6853 25.8602C36.6248 27.0101 36.0946 28.6144 36.0946 30.6731C36.0946 32.3238 36.598 33.7241 37.6048 34.874C38.625 36.0054 40.35 37.044 42.7797 37.9899C45.2229 38.9358 47.1291 39.9837 48.4984 41.1336C49.8811 42.265 50.9013 43.5911 51.5591 45.112C52.2303 46.6328 52.5659 48.4226 52.5659 50.4814C52.5659 53.7642 51.6396 56.3979 49.7871 58.3824C47.9346 60.3484 45.4578 61.3314 42.3569 61.3314C40.3433 61.3314 38.4639 60.8028 36.7188 59.7456C34.9737 58.6699 33.6245 57.2047 32.6714 55.35C31.7318 53.4953 31.2619 51.3902 31.2619 49.0347H35.1482C35.1482 51.4829 35.7992 53.4211 37.1014 54.8492C38.4169 56.2588 40.1688 56.9636 42.3569 56.9636C44.3973 56.9636 45.9612 56.3886 47.0486 55.2387C48.1359 54.0888 48.6796 52.5215 48.6796 50.537C48.6796 48.5525 48.1762 47.0223 47.1694 45.9466C46.1626 44.8523 44.3369 43.7766 41.6924 42.7194Z" fill="black"/>
 <path d="M64.9898 41.9404L61.4056 47.0873V60.775H57.5395V20.2682H61.4056V40.299L74.4336 20.2682H79.1052L67.5672 38.1568L80.0113 60.775H75.38L64.9898 41.9404Z" fill="black"/>
@@ -98,10 +98,10 @@
 </g>
 
 </symbol><symbol id="radio-empty" viewBox="0 0 82 84">
-<g filter="url(#filter0_di)">
-<circle cx="40" cy="40" r="39" stroke="black" stroke-width="2"/>
-</g>
-
+  <g filter="url(#filter0_di)">
+    <circle cx="40" cy="40" r="39" stroke="black" stroke-width="2"/>
+  </g>
+  
 </symbol><symbol id="vscode-icons_file-type-css" viewBox="0 0 16 16">
 <path d="M2.951 13.6005L1.828 1H14.172L13.0475 13.5985L7.9925 15L2.951 13.6005Z" fill="#1572B6"/>
 <path d="M8 13.929L12.085 12.7965L13.046 2.03052H8V13.929Z" fill="#33A9DC"/>
