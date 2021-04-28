@@ -1,8 +1,7 @@
 .header {
   position: relative;
 }
-.header--no-js {
-}
+
 .header__body {
   padding-top: 12px;
   padding-bottom: 9px;
@@ -15,6 +14,7 @@
     grid-template-columns: 1fr 3fr 1fr;
   }
 }
+
 
 .header__logo {
   @media (min-width: $width-desktop+px) {
