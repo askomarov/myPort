@@ -713,6 +713,10 @@ h6 {
       height: 18px;
       box-shadow: 0 0 2px 0 black; } }
 
+@media (min-width: 767.98px) {
+  .catalog {
+    padding: 30px 0; } }
+
 .catalog__container {
   position: relative; }
   @media (max-width: 374.98px) {
@@ -932,7 +936,7 @@ h6 {
   z-index: 10; }
   @media (min-width: 374.98px) {
     .catalog-filter {
-      height: 40px; } }
+      height: 52px; } }
 
 .catalog-filter__title {
   -webkit-backdrop-filter: blur(4px);
@@ -1220,9 +1224,15 @@ input[id="check-all"]:checked + label .icon-check-all__arrow {
       gap: 20px;
       width: auto; } }
 
-.footer__social-item:hover .footer__social-link {
-  fill: rgba(0, 0, 0, 0.7);
-  filter: drop-shadow(0px 0px 5px white); }
+.footer__social-item:hover .footer__social-link, .footer__social-item:active .footer__social-link {
+  transition: all 0.2s ease 0s;
+  fill: rgba(0, 0, 0, 0.7); }
+  .footer__social-item:hover .footer__social-link[aria-label="Vkontakte"], .footer__social-item:active .footer__social-link[aria-label="Vkontakte"] {
+    fill: #0777f7; }
+  .footer__social-item:hover .footer__social-link[aria-label="telegram"], .footer__social-item:active .footer__social-link[aria-label="telegram"] {
+    fill: #30a3e6; }
+  .footer__social-item:hover .footer__social-link[aria-label="instagram"], .footer__social-item:active .footer__social-link[aria-label="instagram"] {
+    fill: #f527b0; }
 
 .footer__social-link {
   fill: black; }
