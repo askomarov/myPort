@@ -46,12 +46,12 @@ const filterItems = () => {
 
 const checkAll = () => {
   for (let i = 0; i < checkBoxes.length; i++) {
-    if (checkBoxes[0].checked
-      && checkBoxes[1].checked
-      && checkBoxes[2].checked) {
-      checkBoxes[3].checked = true;
+    if (checkBoxes[0].checked && checkBoxes[1].checked
+      // && checkBoxes[2].checked
+    ) {
+      checkAllBox.checked = true;
     } else {
-      checkBoxes[3].checked = false;
+      checkAllBox.checked = false;
     }
   }
 };

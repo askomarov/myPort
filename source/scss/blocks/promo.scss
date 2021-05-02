@@ -1,6 +1,7 @@
 .promo {
   padding: 20px 0;
-  min-height: 75vh;
+  min-height: 325px;
+  height: calc(100vh - 187px);
   display: grid;
   grid-template-columns: 1fr;
   justify-items: center;

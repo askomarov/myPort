@@ -4,8 +4,9 @@
   left: 0;
   min-width: 100%;
   z-index: 10;
+
   @media (min-width: $width-mobile+px) {
-    height: 40px;
+    height: 52px;
   }
 }
 
@@ -23,9 +24,9 @@
 
 .catalog-filter__form {
   display: grid;
-  grid-template-columns: repeat(4, auto);
+  grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
   align-items: center;
-  justify-content: space-between;
+  justify-items: center;
   position: relative;
   padding: 5px 0;
 

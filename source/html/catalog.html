@@ -3,8 +3,9 @@
   <div class="catalog__container container">
 
     <div class="catalog__filter catalog-filter">
-      <h2 class="catalog-filter__title main-title">Каталог выполненных работ</h2>
+      <h2 class="catalog-filter__title main-title">Some of my work</h2>
       <form action="" class="catalog-filter__form">
+        <!-- html + css -->
         <input class="catalog-filter__checkbox visually-hidden" type="checkbox" name="html-css" value="html-css"
           id="html-css" checked>
         <label class="catalog-filter__label" for="html-css">
@@ -13,6 +14,7 @@
           </svg>
 
         </label>
+        <!-- js -->
         <input class="catalog-filter__checkbox visually-hidden" type="checkbox" name="javascript" value="javascript"
           id="javascript">
         <label class="catalog-filter__label" for="javascript">
@@ -20,17 +22,17 @@
             <use xlink:href="#logos_javascript"></use>
           </svg>
         </label>
-
-        <input class="catalog-filter__checkbox visually-hidden" type="checkbox" name="vue-js" value="vue-js" id="vue-js"
+        <!-- vue -->
+        <!-- <input class="catalog-filter__checkbox visually-hidden" type="checkbox" name="vue-js" value="vue-js" id="vue-js"
           checked>
         <label class="catalog-filter__label" for="vue-js">
           <svg width="50" height="50">
             <use xlink:href="#icon-vue"></use>
           </svg>
-        </label>
-
+        </label> -->
+        <!-- all -->
         <input class="catalog-filter__checkbox visually-hidden" type="checkbox" name="check-all" value="check-all"
-          id="check-all" checked>
+          id="check-all">
         <label class="catalog-filter__label" for="check-all">
           <svg id="icon-check-all" viewBox="0 0 16 16" width="50" height="50">
             <path class="icon-check-all__wrap"
@@ -40,70 +42,11 @@
               d="M14.015 0.911249C12.0898 2.57825 10.3235 4.34675 8.83175 6.41625C8.17375 7.32925 7.6565 8.3435 7.1785 9.358C6.95375 9.8355 6.8195 10.3322 6.69325 10.829C5.775 9.9755 4.88125 9.09775 3.87325 8.339C3.1545 7.79825 0.742001 9.494 1.5845 10.1285C3.0945 11.2645 4.352 12.6787 5.8195 13.8652C6.434 14.361 7.79575 13.285 8.11475 12.8327C9.165 11.3452 9.3085 9.5255 10.0743 7.90225C11.2433 5.42 13.316 3.38225 15.3618 1.60975C16.8893 0.287749 15.0438 0.0204986 14.0155 0.910249"
               fill="#37B34A" />
           </svg>
-
         </label>
+
       </form>
     </div>
-    <ul class="catalog-grid">
-      <!-- kekstgramm -->
-      <li class="catalog-item" data-filter="javascript">
-        <div class="catalog-item__top"><span class="catalog-item__top-decor"></span></div>
-        <div class="catalog-item__img">
-          <picture>
-            <source type="image/webp" srcset="">
-            <img src="img/kekstagram.jpg" srcset="" alt="Превью kekstagram" width="358" height="578" />
-          </picture>
-        </div>
-        <div class="catalog-item__hover-menu">
-          <a href="https://askomarov.github.io/kekstagramByHTMLAcademy/" target="_blank"
-            class="catalog-item__title-link">
-            <h2 class="catalog-item__title">Кекстаграм</h2>
-          </a>
-          <p class="catalog-item__desc">Учебная работа с онлайн-курса по JavaScript</p>
-          <a href="https://askomarov.github.io/kekstagramByHTMLAcademy/" target="_blank"
-            class="catalog-item__btn main-btn">заценить</a>
-          <!-- <a class="catalog-item__site-link" href="https://askomarov.github.io/kekstagramByHTMLAcademy/"
-            target="_blank">
-            <svg width="30" height="30">
-              <use xlink:href="#icon-external-link"></use>
-            </svg>
-            <span>Ссылка на страницу</span>
-          </a> -->
-          <a class="catalog-item__repo-link" href="https://github.com/askomarov/kekstagramByHTMLAcademy"
-            target="_blank">
-            <svg width="30" height="30">
-              <use xlink:href="#icon-reposit"></use>
-            </svg>
-            <span>Repository</span>
-          </a>
-        </div>
-      </li>
-      <!-- keksobooking -->
-      <li class="catalog-item" data-filter="javascript">
-        <div class="catalog-item__top"><span class="catalog-item__top-decor"></span></div>
-        <div class="catalog-item__img">
-          <picture>
-            <source type="image/webp" srcset="">
-            <img src="img/keksobooking.jpg" srcset="" alt="Превью Кексобукинг" width="358" height="578" />
-          </picture>
-        </div>
-        <div class="catalog-item__hover-menu">
-          <a href="https://askomarov.github.io/keksobookingByHTMLAcademy/" target="_blank"
-            class="catalog-item__title-link">
-            <h2 class="catalog-item__title">Кексобукинг</h2>
-          </a>
-          <p class="catalog-item__desc">Учебная работа с онлайн-курса по JavaScript</p>
-          <a href="https://askomarov.github.io/kekstagramByHTMLAcademy/" target="_blank"
-            class="catalog-item__btn main-btn">посмотреть</a>
-          <a class="catalog-item__repo-link" href="https://askomarov.github.io/keksobookingByHTMLAcademy/"
-            target="_blank">
-            <svg width="30" height="30">
-              <use xlink:href="#icon-reposit"></use>
-            </svg>
-            <span>Repository</span>
-          </a>
-        </div>
-      </li>
+    <ul class="catalog-list">
       <!-- погнали -->
       <li class="catalog-item active" data-filter="html-css">
         <div class="catalog-item__top"><span class="catalog-item__top-decor"></span></div>
@@ -208,24 +151,6 @@
           </a>
         </div>
       </li>
-      <!-- пинк -->
-      <!-- <li class="catalog-item">
-        <div class="catalog-item__top"><span class="catalog-item__top-decor"></span></div>
-        <div class="catalog-item__img">
-          <picture>
-            <source type="image/webp" srcset="img/img-pink.webp">
-            <img src="img/img-pink.jpg" alt="Превью сайт приложения PINK" width="358" height="578" />
-          </picture>
-        </div>
-        <div class="catalog-item__hover-menu">
-          <a href="https://askomarov.github.io/myPink/" target="_blank" class="catalog-item__title-link">
-            <h2 class="catalog-item__title">Pink</h2>
-          </a>
-          <p class="catalog-item__desc">Продуктовый лендинг<br>приложения для iOS и Android</p>
-          <a href="https://askomarov.github.io/myPink/" target="_blank" class="catalog-item__btn main-btn">view
-            project</a>
-        </div>
-      </li> -->
       <!-- карточки с фильтром -->
       <li class="catalog-item active" data-filter="html-css">
         <div class="catalog-item__top"><span class="catalog-item__top-decor"></span></div>
@@ -252,7 +177,7 @@
         </div>
       </li>
       <!-- расчет среднего Vue.js -->
-      <li class="catalog-item active" data-filter="vue-js">
+      <!-- <li class="catalog-item active" data-filter="vue-js">
         <div class="catalog-item__top"><span class="catalog-item__top-decor"></span></div>
         <div class="catalog-item__img">
           <picture>
@@ -275,8 +200,68 @@
             <span>Repository</span>
           </a>
         </div>
+      </li> -->
+    </ul>
+    <ul class="catalog-list">
+      <!-- kekstgramm -->
+      <li class="catalog-item" data-filter="javascript">
+        <div class="catalog-item__top"><span class="catalog-item__top-decor"></span></div>
+        <div class="catalog-item__img">
+          <picture>
+            <source type="image/webp" srcset="">
+            <img src="img/kekstagram.jpg" srcset="" alt="Превью kekstagram" width="358" height="578" />
+          </picture>
+        </div>
+        <div class="catalog-item__hover-menu">
+          <a href="https://askomarov.github.io/kekstagramByHTMLAcademy/" target="_blank"
+            class="catalog-item__title-link">
+            <h2 class="catalog-item__title">Кекстаграм</h2>
+          </a>
+          <p class="catalog-item__desc">Учебная работа с онлайн-курса по JavaScript</p>
+          <a href="https://askomarov.github.io/kekstagramByHTMLAcademy/" target="_blank"
+            class="catalog-item__btn main-btn">заценить</a>
+          <!-- <a class="catalog-item__site-link" href="https://askomarov.github.io/kekstagramByHTMLAcademy/"
+                target="_blank">
+                <svg width="30" height="30">
+                  <use xlink:href="#icon-external-link"></use>
+                </svg>
+                <span>Ссылка на страницу</span>
+              </a> -->
+          <a class="catalog-item__repo-link" href="https://github.com/askomarov/kekstagramByHTMLAcademy"
+            target="_blank">
+            <svg width="30" height="30">
+              <use xlink:href="#icon-reposit"></use>
+            </svg>
+            <span>Repository</span>
+          </a>
+        </div>
+      </li>
+      <!-- keksobooking -->
+      <li class="catalog-item" data-filter="javascript">
+        <div class="catalog-item__top"><span class="catalog-item__top-decor"></span></div>
+        <div class="catalog-item__img">
+          <picture>
+            <source type="image/webp" srcset="">
+            <img src="img/keksobooking.jpg" srcset="" alt="Превью Кексобукинг" width="358" height="578" />
+          </picture>
+        </div>
+        <div class="catalog-item__hover-menu">
+          <a href="https://askomarov.github.io/keksobookingByHTMLAcademy/" target="_blank"
+            class="catalog-item__title-link">
+            <h2 class="catalog-item__title">Кексобукинг</h2>
+          </a>
+          <p class="catalog-item__desc">Учебная работа с онлайн-курса по JavaScript</p>
+          <a href="https://askomarov.github.io/kekstagramByHTMLAcademy/" target="_blank"
+            class="catalog-item__btn main-btn">посмотреть</a>
+          <a class="catalog-item__repo-link" href="https://askomarov.github.io/keksobookingByHTMLAcademy/"
+            target="_blank">
+            <svg width="30" height="30">
+              <use xlink:href="#icon-reposit"></use>
+            </svg>
+            <span>Repository</span>
+          </a>
+        </div>
       </li>
     </ul>
-
   </div>
 </section>

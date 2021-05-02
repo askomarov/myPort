@@ -1,60 +1,28 @@
 <footer class="footer">
   <div class="footer__container container">
-    <a href="index.html" class="footer__logo">
-      <svg width="128" height="48" role="img" aria-label="логотип aslogo">
-        <use xlink:href="#aslogo"></use>
-      </svg>
-    </a>
-    <ul class="footer__social">
-      <li class="footer__social-item">
-        <a href="" class="footer__social-link" aria-label="Vkontakte">
-          <svg width="56" height="40">
-            <use xlink:href="#icon-vk"></use>
-          </svg>
-        </a>
-      </li>
-      <li class="footer__social-item">
-        <a href="https://github.com/askomarov" class="footer__social-link" aria-label="github">
-          <svg width="40" height="40">
-            <use xlink:href="#github-logo"></use>
-          </svg>
-        </a>
-      </li>
-      <li class="footer__social-item">
-        <a href="" class="footer__social-link" aria-label="instagram">
-          <svg width="40" height="40">
-            <use xlink:href="#icon-inst"></use>
-          </svg>
-        </a>
-      </li>
-      <li class="footer__social-item">
-        <a href="" class="footer__social-link" aria-label="telegram">
-          <svg width="40" height="40">
-            <use xlink:href="#icon-telegram"></use>
-          </svg>
-        </a>
-      </li>
 
+    <div class="footer__contacts contacts">
+      <div class="contacts__wrap">
 
-    </ul>
-    <!-- <div class="footer__copy">
-      <a href="" class="footer__academy-logo">
-        <svg width="100" height="34">
-          <use xlink:href="#aslogoblack"></use>
-        </svg>
-      </a>
-    </div> -->
+        <div class="contacts__list">
+          <a href="https://github.com/askomarov" class="contacts__link" aria-label="github">
+            <svg width="40" height="40">
+              <use xlink:href="#github-logo"></use>
+            </svg>
+            <span>Github</span>
+          </a>
+          <a href="https://t.me/askomarov" class="contacts__link" aria-label="telegram">
+            <svg width="40" height="40">
+              <use xlink:href="#icon-telegram"></use>
+            </svg>
+            <span>Telegram</spam>
+          </a>
+        </div>
+
+      </div>
+    </div>
+
   </div>
-  <!-- волны -->
-  <svg class="waves" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
-    <defs>
-      <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path>
-    </defs>
-    <g class="waves-animation">
-      <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7)"></use>
-      <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)"></use>
-      <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)"></use>
-      <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff"></use>
-    </g>
-  </svg>
+
+  @@include('waves.html')
 </footer>
