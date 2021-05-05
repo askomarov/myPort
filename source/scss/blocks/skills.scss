@@ -4,6 +4,7 @@
 
 .skills__list {
   background: #eaeaea8a;
+  box-shadow: 0 0 10px 0 var(--opacity-black);
   border-radius: 10px;
   padding: 20px;
   display: grid;
@@ -38,6 +39,10 @@
   position: relative;
   overflow: hidden;
   position: relative;
+  svg {
+    width: 45px;
+    height: 45px;
+  }
 
   span {
     color: var(--text-color);
@@ -75,7 +80,9 @@
 
   &:hover {
     span {
-      bottom: 1em;
+      bottom: 0em;
+      color: var(--link-hover-color);
+      text-shadow: var(--btn-text-shadow);
     }
     &:after {
       left: 110%;
@@ -87,34 +94,5 @@
   }
 
   @media (min-width: $width-tablet+px) {
-  }
-}
-.skills__item--more {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.skills__item-more {
-  position: relative;
-  width: 10px;
-  height: 10px;
-  background: black;
-  border-radius: 50%;
-
-  &::after,
-  &::before {
-    content: "";
-    position: absolute;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background: inherit;
-    display: block;
-  }
-  &::after {
-    left: 110%;
-  }
-  &::before {
-    right: 110%;
   }
 }

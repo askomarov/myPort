@@ -1,5 +1,5 @@
 import { filterItems } from './catalog-filter.js';
-import { showLinkOnTop } from './link-on-top.js';
+import { showLinkOnTop, onLinkOnTopClick } from './link-on-top.js';
 
 
 
@@ -23,19 +23,9 @@ const headerMenuToggler = () => {
 
 filterItems();
 
-showLinkOnTop();
 
 const skilsList = document.querySelector('.skills__list');
 const skillsItems = skilsList.querySelectorAll('.skills__item');
-
-// window.onscroll = () => {
-//   // console.log('прокрутили на ' + window.pageYOffset);
-//   // console.log('клиент высота' + document.body.clientHeight);
-//   if (window.pageYOffset + document.body.clientHeight > skilsList.offsetTop + 50) {
-//     // console.log('title :' + skilsList.offsetTop);
-//     skilsList.classList.add('magick');
-//   } else { skilsList.classList.remove('magick'); }
-// }
 
 
 let page = document.querySelector(".page");
@@ -52,7 +42,9 @@ document.addEventListener("DOMContentLoaded", () => {
     } else {
       skilsList.classList.remove('magick');
     }
+    showLinkOnTop();
   };
 
+  onLinkOnTopClick();
 
 });

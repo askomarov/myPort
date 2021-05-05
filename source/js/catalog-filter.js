@@ -9,18 +9,18 @@ const filterItems = () => {
 
     checkbox.addEventListener('click', () => {
       allItems.forEach(item => {
-        if (item.dataset.filter == checkbox.value && checkbox.checked === true
+        if (item.dataset.filter === checkbox.value && checkbox.checked === true
         ) {
           item.classList.add('active');
         }
-        if (item.dataset.filter == checkbox.value && checkbox.checked === false
+        if (item.dataset.filter === checkbox.value && checkbox.checked === false
         ) {
           item.classList.remove('active');
           checkAllBox.checked = false;
         }
       });
 
-      if (checkbox.value == "check-all" && checkbox.checked === true) {
+      if (checkbox.value === "check-all" && checkbox.checked === true) {
         checkBoxes.forEach(checkbox => {
           checkbox.checked = true;
         })
@@ -28,7 +28,7 @@ const filterItems = () => {
           item.classList.add('active');
         })
       }
-      if (checkbox.value == "check-all" && checkbox.checked === false) {
+      if (checkbox.value === "check-all" && checkbox.checked === false) {
         checkBoxes.forEach(checkbox => {
           checkbox.checked = false;
         })
@@ -36,7 +36,6 @@ const filterItems = () => {
           item.classList.remove('active');
         })
       }
-
       checkAll();
     })
 
