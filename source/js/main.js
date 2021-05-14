@@ -51,8 +51,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
   onLinkOnTopClick();
 
-  onMoveParall(promo);
-  cancelParall(promo);
+  if (document.body.clientWidth > 768) {
+    onMoveParall(promo);
+    cancelParall(promo);
+  }
 
 });
 
