@@ -1,10 +1,41 @@
 <section class="promo">
   <div class="promo__container container">
     <div class="promo__img-wrap">
-      <picture>
-        <source srcset="img/askomarov.webp" type="image/webp">
-        <img src="img/askomarov.jpg" alt="Artem Komarov" class="poromo__img" width="250" height="250">
-      </picture>
+
+
+
+      <div class="promo__btn-wrap">
+        <input class="visually-hidden" id="profile" name="profile" type="checkbox">
+        <label class="promo__btn" for="profile">
+          <span>+</span>
+        </label>
+        </input>
+        <div class="rotate">
+          <div class="promo__contact">
+            <div class="contacts__list">
+              <a href="https://github.com/askomarov" class="contacts__link" aria-label="github">
+                <svg width="40" height="40">
+                  <use xlink:href="#github-logo"></use>
+                </svg>
+                <span>Github</span>
+              </a>
+              <a href="https://t.me/askomarov" class="contacts__link" aria-label="telegram">
+                <svg width="40" height="40">
+                  <use xlink:href="#icon-telegram"></use>
+                </svg>
+                <span>Telegram</spam>
+              </a>
+            </div>
+          </div>
+          <picture>
+            <source srcset="img/askomarov.webp" type="image/webp">
+            <img src="img/askomarov.jpg" alt="Artem Komarov" class="promo__img" width="250" height="250">
+          </picture>
+        </div>
+
+      </div>
+
+
     </div>
     <h1 class="promo__title">
       Artem Komarov

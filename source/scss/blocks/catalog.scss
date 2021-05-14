@@ -22,7 +22,7 @@
   border-radius: 10px;
   list-style: none;
   transition: all 0.7s ease;
-  box-shadow: 0 0 10px 0 var(--opacity-black);
+  box-shadow: var(--shadow);
   position: relative;
 
   @media (min-width: $width-tablet+px) {

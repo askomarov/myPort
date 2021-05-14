@@ -3,11 +3,15 @@ $fontfamily: "Roboto", "Arial", sans-serif;
 @media (prefers-color-scheme: dark) {
   :root {
     --shadow: 0 0 4px 0 rgb(114, 114, 114), 0 10px 100px rgb(41, 37, 37), 0 10px 200px rgb(126, 119, 119);
+    --drop-shadow: 0 0 10px var(--basic-black);
+    --box-shadow: 0 0 10px 0 var(--basic-black);
   }
 }
 
 @media (prefers-color-scheme: light) {
   :root {
+    --drop-shadow: 0 0 10px var(--basic-white);
+    --box-shadow: 0 0 10px 0 var(--basic-white);
     --basic-black: #000000;
     --basic-white: #ffffff;
     --basic-gray: #eeeeee;
@@ -53,6 +57,6 @@ $fontfamily: "Roboto", "Arial", sans-serif;
 
     --slider-dot: #ababab;
     --slider-dot-shadow: 0px 2px 1px rgba(0, 0, 0, 0.15);
-    --shadow: 0 0 4px 0 black, 0 10px 100px #fff, 0 10px 200px #eee;
+    --shadow: 0 0 10px 0 var(--opacity-black);
   }
 }

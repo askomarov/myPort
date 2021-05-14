@@ -1,5 +1,6 @@
 import { filterItems } from './catalog-filter.js';
 import { showLinkOnTop, onLinkOnTopClick } from './link-on-top.js';
+import { onMoveParall, cancelParall } from './parall.js';
 
 
 
@@ -30,6 +31,9 @@ const skillsItems = skilsList.querySelectorAll('.skills__item');
 
 let page = document.querySelector(".page");
 
+
+const promo = document.querySelector('.promo__container');
+
 document.addEventListener("DOMContentLoaded", () => {
   page.classList.remove('no-js');
   headerMenuToggler();
@@ -47,4 +51,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
   onLinkOnTopClick();
 
+  onMoveParall(promo);
+  cancelParall(promo);
+
 });
+
+
+

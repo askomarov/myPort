@@ -17,39 +17,45 @@
   text-align: center;
 }
 .promo__img-wrap {
-  background-color: blanchedalmond;
-  border-radius: 50%;
+  background-color: transparent;
   width: 250px;
   height: 250px;
   position: relative;
-  overflow: hidden;
-  box-shadow: var(--shadow);
+  // overflow: hidden;
+
   margin-bottom: 10px;
 
   @media (min-width: $width-desktop+px) {
-    width: 350px;
-    height: 350px;
+    width: 550px;
+    height: 550px;
 
     &:hover {
-      .poromo__img {
-        transform: scale(1.3) translateX(-30px) translateY(-30px);
+      .promo__img {
+        // transform: scale(1.3) translateX(-30px) translateY(-30px);
       }
       ~ .promo__text {
         text-decoration-color: #62d0df;
         text-underline-offset: 0.4em;
       }
+      .promo__btn {
+        z-index: 5;
+      }
     }
   }
 }
 
-.poromo__img {
+.promo__img {
+  z-index: 2;
   position: absolute;
-  width: 100%;
-  height: 100%;
   top: 0;
   left: 0;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
   object-fit: cover;
   transition: all 0.5s ease 0s;
+  border-radius: 50%;
+  box-shadow: var(--shadow);
 }
 .promo__title {
   font-weight: 300;
@@ -69,4 +75,102 @@
   text-decoration: underline;
   text-underline-offset: 0.2em;
   transition: text-decoration-color 300ms, text-underline-offset 300ms;
+}
+
+.promo__btn-wrap {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 50%;
+  height: 50%;
+  background: transparent;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+input[name="profile"] {
+  &:checked {
+    + .promo__btn {
+      z-index: 5;
+      span {
+        transform: rotate(135deg);
+      }
+    }
+    ~ .rotate {
+      transform: translate(-50%, -50%) rotateX(180deg);
+    }
+  }
+}
+.promo__btn {
+  z-index: 1;
+  width: 60px;
+  height: 60px;
+  background: chartreuse;
+  margin-right: 30px;
+  margin-bottom: 30px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--box-shadow);
+  transition: all 0.3s ease 0s;
+  span {
+    transition: all 0.3s ease-in-out 0s;
+    display: inline-block;
+    font-size: 30px;
+  }
+  &:hover {
+    box-shadow: 0 0 10px 0;
+  }
+}
+
+.promo__contact {
+  transition: all 0.5s ease-in 0s;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: cyan;
+  border-radius: 50%;
+  transform: rotateX(180deg);
+  backface-visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .contacts__list {
+    flex-direction: column;
+  }
+  .contacts__link {
+    filter: brightness(0.5);
+  }
+}
+
+.rotate {
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 550px;
+  height: 550px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transform-style: preserve-3d;
+  // z-index: 10;
+  transition: all 600ms;
+}
+.front {
+  background: #fff;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  backface-visibility: hidden;
+}
+.back {
+  background: #222;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  backface-visibility: hidden;
+  transform: rotateX(180deg);
 }
