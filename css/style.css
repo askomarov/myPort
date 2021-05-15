@@ -632,12 +632,14 @@ h6 {
       background-color: #d9f0f7;
       visibility: hidden;
       opacity: 0;
-      transform: translateX(100%);
+      transform: translateY(100%) scale(0);
       transition: transform 0.3s ease-out, opacity 0.3s ease-out; }
+      .site-list .site-list__item {
+        display: none; }
       .site-list--open {
         visibility: visible;
         opacity: 1;
-        transform: translateX(0);
+        transform: translateY(0) scale(1);
         background: rgba(127, 255, 0, 0.7);
         z-index: 20;
         width: -webkit-max-content;
@@ -653,7 +655,10 @@ h6 {
         font-weight: 700;
         text-transform: uppercase; }
         .site-list--open .site-list__item {
-          margin: 0; } }
+          margin: 0;
+          display: flex; }
+          .site-list--open .site-list__item:focus, .site-list--open .site-list__item:focus-visible, .site-list--open .site-list__item:focus-within {
+            outline: 1px solid black; } }
 
 .site-list__item {
   margin-right: 9px;
@@ -700,6 +705,10 @@ h6 {
     .header-actions__link svg {
       width: 32px;
       height: 32px; } }
+  .header-actions__link:focus, .header-actions__link:focus-visible, .header-actions__link:focus-within {
+    outline: 1px solid black;
+    fill: #30a3e6;
+    color: #30a3e6; }
 
 .header-menu {
   display: flex;
@@ -728,6 +737,8 @@ h6 {
       border: none;
       width: 48px;
       height: 48px; }
+      .header-menu__toggle:focus, .header-menu__toggle:focus-visible, .header-menu__toggle:focus-within {
+        outline: 1px solid black; }
       .header-menu__toggle .header-menu__icon {
         width: 24px;
         height: 2px;
@@ -1117,6 +1128,9 @@ input[name="profile"]:checked + .promo__btn {
 input[name="profile"]:checked ~ .rotate {
   transform: rotateX(180deg); }
 
+input[name="profile"]:focus + .promo__btn, input[name="profile"]:focus-visible + .promo__btn, input[name="profile"]:focus-within + .promo__btn {
+  box-shadow: 0 0 3px 0, 0 0 0 3px black; }
+
 .promo__btn {
   z-index: 5;
   width: 48px;
@@ -1150,8 +1164,8 @@ input[name="profile"]:checked ~ .rotate {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #8bc6ec;
-  background-image: linear-gradient(135deg, #8bc6ec 0%, #9599e2 100%);
+  background-color: #eaeaea8a;
+  box-shadow: 0 0 10px 0 var(--opacity-black);
   border-radius: 50%;
   transform: rotateX(180deg);
   -webkit-backface-visibility: hidden;
