@@ -6,7 +6,7 @@
   grid-template-columns: 1fr;
   justify-items: center;
   align-items: center;
-  
+
   @media (max-height: 600px) {
     height: auto;
   }
@@ -91,6 +91,13 @@ input[name="profile"] {
       transform: rotateX(180deg);
     }
   }
+  &:focus,
+  &:focus-visible,
+  &:focus-within {
+    + .promo__btn {
+      box-shadow: 0 0 3px 0, 0 0 0 3px black;
+    }
+  }
 }
 
 .promo__btn {
@@ -133,8 +140,8 @@ input[name="profile"] {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #8bc6ec;
-  background-image: linear-gradient(135deg, #8bc6ec 0%, #9599e2 100%);
+  background-color: #eaeaea8a;
+  box-shadow: 0 0 10px 0 var(--opacity-black);
   border-radius: 50%;
   transform: rotateX(180deg);
   backface-visibility: hidden;

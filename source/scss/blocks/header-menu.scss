@@ -28,6 +28,12 @@
     border: none;
     width: 48px;
     height: 48px;
+    &:focus,
+    &:focus-visible,
+    &:focus-within {
+      outline: 1px solid black;
+    }
+
     .header-menu__icon {
       width: 24px;
       height: 2px;

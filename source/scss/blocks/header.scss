@@ -45,13 +45,15 @@
     background-color: #d9f0f7;
     visibility: hidden;
     opacity: 0;
-    transform: translateX(100%);
+    transform: translateY(100%) scale(0);
     transition: transform 0.3s ease-out, opacity 0.3s ease-out;
-
+    .site-list__item {
+      display: none;
+    }
     &--open {
       visibility: visible;
       opacity: 1;
-      transform: translateX(0);
+      transform: translateY(0) scale(1);
       background: rgba($color: chartreuse, $alpha: 0.7);
       z-index: 20;
       width: max-content;
@@ -67,6 +69,12 @@
 
       .site-list__item {
         margin: 0;
+        display: flex;
+        &:focus,
+        &:focus-visible,
+        &:focus-within {
+          outline: 1px solid black;
+        }
       }
     }
   }
@@ -128,5 +136,12 @@
       width: 32px;
       height: 32px;
     }
+  }
+  &:focus,
+  &:focus-visible,
+  &:focus-within {
+    outline: 1px solid black;
+    fill: #30a3e6;
+    color: #30a3e6;
   }
 }
