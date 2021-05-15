@@ -12,7 +12,7 @@ const headerMenuToggler = () => {
   headerMenuToggle.addEventListener("click", function () {
     if (headerMenu.classList.contains("site-list--open")) {
       this.setAttribute("aria-expanded", "false");
-      this.setAttribute("aria-label", "menu");
+      this.setAttribute("aria-label", "open menu");
       headerMenu.classList.remove("site-list--open");
     } else {
       headerMenu.classList.add("site-list--open");
@@ -22,7 +22,7 @@ const headerMenuToggler = () => {
   });
 }
 
-filterItems();
+
 
 
 const skilsList = document.querySelector('.skills__list');
@@ -37,7 +37,8 @@ const promo = document.querySelector('.promo__container');
 document.addEventListener("DOMContentLoaded", () => {
   page.classList.remove('no-js');
   headerMenuToggler();
-
+  filterItems();
+  
   window.onscroll = () => {
     // console.log('прокрутили на ' + window.pageYOffset);
     // console.log('клиент высота' + document.body.clientHeight);
