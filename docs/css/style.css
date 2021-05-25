@@ -1191,10 +1191,6 @@ input[name="profile"]:focus + .promo__btn, input[name="profile"]:focus-visible +
     .rotate {
       width: 350px;
       height: 350px; } }
-  @media (min-width: 1300px) {
-    .rotate {
-      width: 550px;
-      height: 550px; } }
 
 .github {
   background: black;
