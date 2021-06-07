@@ -181,19 +181,7 @@ h6 {
   overflow: hidden; }
 
 .page {
-  -webkit-animation: colorChange 40s linear infinite alternate both;
-          animation: colorChange 40s linear infinite alternate both;
-  -webkit-animation-direction: alternate;
-          animation-direction: alternate;
-  background-color: rosybrown; }
-  @media (prefers-color-scheme: light) {
-    .page {
-      -webkit-animation: colorChangeAnimistaLight 20s linear infinite alternate both;
-              animation: colorChangeAnimistaLight 20s linear infinite alternate both; } }
-  @media (prefers-color-scheme: dark) {
-    .page {
-      -webkit-animation: colorChangeAnimistaDark 20s linear infinite alternate both;
-              animation: colorChangeAnimistaDark 20s linear infinite alternate both; } }
+  background: #13c0fb; }
 
 .main-title {
   font-size: clamp(20px, 3vw, 36px);
@@ -789,6 +777,16 @@ h6 {
   transition: all 0.7s ease;
   box-shadow: var(--shadow);
   position: relative; }
+  .catalog-list::-webkit-scrollbar {
+    height: 12px;
+    background: #e3a62c;
+    background: linear-gradient(to bottom right, #ffaa00, #ffdc68);
+    border-radius: 5px; }
+  .catalog-list::-webkit-scrollbar-thumb {
+    background: #a593f0;
+    background: linear-gradient(to bottom right, #a593f0, #773d72);
+    border-radius: 5px;
+    box-shadow: inset 2px 1px 7px #843eda; }
   @media (min-width: 767.98px) {
     .catalog-list {
       scroll-padding-left: 20px;

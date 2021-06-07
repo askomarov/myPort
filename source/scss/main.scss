@@ -1,14 +1,13 @@
 .page {
-  animation: colorChange 40s linear infinite alternate both;
+  // animation: colorChange 40s linear infinite alternate both;
   // animation: colorChangeAnimistaDark 20s linear infinite alternate both;
-  animation-direction: alternate;
-  background-color: rosybrown;
+  // animation-direction: alternate;
 
   @media (prefers-color-scheme: light) {
-    animation: colorChangeAnimistaLight 20s linear infinite alternate both;
+    background: #13c0fb;
   }
   @media (prefers-color-scheme: dark) {
-    animation: colorChangeAnimistaDark 20s linear infinite alternate both;
+    background: #3a94a3;
   }
 }
 
