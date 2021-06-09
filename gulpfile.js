@@ -76,7 +76,8 @@ const images = () => {
       imagemin.mozjpeg({ progressive: true }),
       // imageminJpegtran({ progressive: true }),
       imagemin.svgo()
-    ]));
+    ]))
+    .pipe(gulp.dest("source/img"));
 };
 exports.images = images;
 
