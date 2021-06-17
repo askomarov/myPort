@@ -1241,6 +1241,10 @@ input[name="profile"]:focus + .promo__btn, input[name="profile"]:focus-visible +
 .skills {
   padding: 30px 0; }
 
+.skills__change-text {
+  margin: 0 auto;
+  justify-content: center; }
+
 .skills__list {
   background: #eaeaea8a;
   box-shadow: 0 0 10px 0 var(--opacity-black);
@@ -1343,3 +1347,86 @@ input[name="profile"]:focus + .promo__btn, input[name="profile"]:focus-visible +
   padding: 5px 15px;
   border-radius: 5px;
   box-shadow: 0 0 5px 0 #ffffff; }
+
+.change-text-wrap {
+  display: flex;
+  align-items: flex-start;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none; }
+  .change-text-wrap p {
+    font-size: clamp(20px, 3vw, 36px);
+    color: #0b236f;
+    line-height: clamp(20px, 3vw, 36px); }
+  .change-text-wrap ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: auto;
+    height: clamp(20px, 3vw, 36px);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden; }
+    .change-text-wrap ul li {
+      position: relative;
+      font-size: clamp(20px, 3vw, 36px);
+      line-height: clamp(20px, 3vw, 36px);
+      -webkit-animation: change-word ease 9s infinite;
+              animation: change-word ease 9s infinite; }
+
+@-webkit-keyframes change-word {
+  0% {
+    color: #e75c37; }
+  10% {
+    transform: translateY(-100%);
+    color: #287ebc; }
+  25% {
+    transform: translateY(-200%);
+    color: #f7e22f; }
+  35% {
+    transform: translateY(-300%);
+    color: #aa66fe; }
+  50% {
+    transform: translateY(-400%);
+    color: #f2743e; }
+  60% {
+    transform: translateY(-300%);
+    color: #aa66fe; }
+  70% {
+    transform: translateY(-200%);
+    color: #f7e22f; }
+  85% {
+    transform: translateY(-100%);
+    color: #287ebc; }
+  100% {
+    transform: translateY(0%);
+    color: #e75c37; } }
+
+@keyframes change-word {
+  0% {
+    color: #e75c37; }
+  10% {
+    transform: translateY(-100%);
+    color: #287ebc; }
+  25% {
+    transform: translateY(-200%);
+    color: #f7e22f; }
+  35% {
+    transform: translateY(-300%);
+    color: #aa66fe; }
+  50% {
+    transform: translateY(-400%);
+    color: #f2743e; }
+  60% {
+    transform: translateY(-300%);
+    color: #aa66fe; }
+  70% {
+    transform: translateY(-200%);
+    color: #f7e22f; }
+  85% {
+    transform: translateY(-100%);
+    color: #287ebc; }
+  100% {
+    transform: translateY(0%);
+    color: #e75c37; } }
