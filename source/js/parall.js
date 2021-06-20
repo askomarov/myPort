@@ -1,4 +1,4 @@
-const onMoveParall = (item) => {
+const onHoverBLockFollowCursor = (item) => {
   const itemRect = item.getBoundingClientRect();
 
   item.addEventListener("mousemove", evt => {
@@ -19,4 +19,4 @@ const cancelParall = (item) => {
   })
 };
 
-export { onMoveParall, cancelParall }
+export { onHoverBLockFollowCursor, cancelParall }
