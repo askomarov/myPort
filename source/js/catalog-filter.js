@@ -1,9 +1,9 @@
-const allItems = document.querySelectorAll('.catalog-item');
 
 const checkBoxes = document.querySelectorAll('.catalog-filter__checkbox');
 const checkAllBox = document.querySelector('#check-all');
 
 const filterItems = () => {
+  const allItems = document.querySelectorAll('.catalog-item');
 
   checkBoxes.forEach(checkbox => {
 
