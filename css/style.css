@@ -1090,7 +1090,8 @@ input[id="check-all"]:checked + label .icon-check-all__arrow {
   align-content: center;
   text-align: center;
   height: 100%;
-  width: 100%; }
+  width: 100%;
+  max-width: 75%; }
   @media (min-width: 767.98px) {
     .promo__container:hover .promo__text {
       -webkit-text-decoration-color: #62d0df;
@@ -1319,6 +1320,10 @@ input[name="profile"]:focus + .promo__btn, input[name="profile"]:focus-visible +
     left: 110%; }
   .skills__item:hover:before {
     right: 110%; }
+
+.page.no-js .skills__list {
+  opacity: 1;
+  transform: none; }
 
 .footer {
   padding: 25px 0 0; }
