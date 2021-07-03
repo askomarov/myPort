@@ -99,3 +99,10 @@
   @media (min-width: $width-tablet+px) {
   }
 }
+
+.page.no-js {
+  .skills__list {
+    opacity: 1;
+    transform: none;
+  }
+}

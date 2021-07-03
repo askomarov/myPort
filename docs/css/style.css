@@ -1321,6 +1321,10 @@ input[name="profile"]:focus + .promo__btn, input[name="profile"]:focus-visible +
   .skills__item:hover:before {
     right: 110%; }
 
+.page.no-js .skills__list {
+  opacity: 1;
+  transform: none; }
+
 .footer {
   padding: 25px 0 0; }
 

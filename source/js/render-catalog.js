@@ -1,4 +1,5 @@
 const createCatalogItems = (itemsList, catalogListParent) => {
+  catalogListParent.innerHTML = "";
   // html шаблон который будем копировать
   const catalogItemTemplate = document.querySelector('#catalog-item').content.querySelector('.catalog-item');
   const similiarItemsFragment = document.createDocumentFragment();
