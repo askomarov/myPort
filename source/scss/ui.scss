@@ -17,15 +17,16 @@
   }
 
   &:active {
-    -webkit-box-shadow: var(--btn-shadow-active);
     box-shadow: var(--btn-shadow-active);
     background-image: var(--btn-gradient-active);
   }
+
   &:focus {
     outline: none;
     border: 2px solid var(--input-focus-border);
   }
 }
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -37,7 +38,4 @@
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
-}
-
-.sub-title {
 }

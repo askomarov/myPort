@@ -34,7 +34,7 @@
     "build-webpack": "webpack --mode production",
     "test": "npm run editorconfig && npm run stylelint",
     "editorconfig": "editorconfig-cli",
-    "stylelint": "stylelint \"source/sass/**/*.scss\" --syntax scss"
+    "stylelint": "stylelint \"source/scss/**/*.scss\" --syntax scss"
   },
   "browserslist": [
     "last 2 versions",

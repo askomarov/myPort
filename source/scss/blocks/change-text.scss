@@ -35,34 +35,42 @@ $change-text-height: clamp(20px, 3vw, 36px);
   0% {
     color: #e75c37;
   }
+
   10% {
     transform: translateY(-100%);
     color: #287ebc;
   }
+
   25% {
     transform: translateY(-200%);
     color: #f7e22f;
   }
+
   35% {
     transform: translateY(-300%);
     color: #aa66fe;
   }
+
   50% {
     transform: translateY(-400%);
     color: #f2743e;
   }
+
   60% {
     transform: translateY(-300%);
     color: #aa66fe;
   }
+
   70% {
     transform: translateY(-200%);
     color: #f7e22f;
   }
+
   85% {
     transform: translateY(-100%);
     color: #287ebc;
   }
+
   100% {
     transform: translateY(0%);
     color: #e75c37;

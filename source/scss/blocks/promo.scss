@@ -83,6 +83,7 @@ input[name="profile"] {
   &:checked {
     + .promo__btn {
       box-shadow: 0 0 3px 0;
+
       span {
         transform: rotate(135deg);
       }
@@ -92,6 +93,7 @@ input[name="profile"] {
       transform: rotateX(180deg);
     }
   }
+
   &:focus,
   &:focus-visible,
   &:focus-within {

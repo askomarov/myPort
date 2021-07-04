@@ -1,13 +1,10 @@
-.contacts {
-}
-.contacts__wrap {
-}
 .contacts__list {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 30px;
 }
+
 .contacts__link {
   display: inline-flex;
   align-items: center;

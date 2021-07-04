@@ -19,6 +19,7 @@
   @media (min-width: $width-desktop+px) {
     justify-self: start;
   }
+
   svg {
     fill: #62d0df;
   }
@@ -31,6 +32,7 @@
     top: 10px;
   }
 }
+
 .site-list {
   display: flex;
   flex-wrap: wrap;
@@ -47,9 +49,11 @@
     opacity: 0;
     transform: translateY(100%) scale(0);
     transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+
     .site-list__item {
       display: none;
     }
+
     &--open {
       visibility: visible;
       opacity: 1;
@@ -70,6 +74,7 @@
       .site-list__item {
         margin: 0;
         display: flex;
+
         &:focus,
         &:focus-visible,
         &:focus-within {
@@ -121,22 +126,27 @@
   font-size: 20px;
   line-height: 23px;
   color: #3e0d41;
+
   span {
     white-space: nowrap;
   }
+
   svg {
     margin-right: 10px;
   }
+
   &:hover {
     fill: #30a3e6;
     color: #30a3e6;
   }
+
   @media (min-width: $width-desktop+px) {
     svg {
       width: 32px;
       height: 32px;
     }
   }
+
   &:focus,
   &:focus-visible,
   &:focus-within {

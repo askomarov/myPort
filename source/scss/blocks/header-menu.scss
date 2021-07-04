@@ -28,6 +28,7 @@
     border: none;
     width: 48px;
     height: 48px;
+
     &:focus,
     &:focus-visible,
     &:focus-within {
@@ -51,21 +52,26 @@
         left: 0;
         transition: transform 0.3s ease 0s;
       }
+
       &::after {
         transform-origin: center;
         bottom: 6px;
       }
+
       &::before {
         transform-origin: center;
         top: 6px;
       }
     }
+
     &[aria-expanded="true"] {
       .header-menu__icon {
         height: 0;
+
         &::after {
           transform: translateY(7px) rotate(45deg);
         }
+
         &::before {
           transform: translateY(-7px) rotate(-45deg);
         }

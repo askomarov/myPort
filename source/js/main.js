@@ -12,11 +12,9 @@ const headerMenu = document.querySelector(".site-list");
 const skilsList = document.querySelector('.skills__list');
 const promo = document.querySelector('.promo__container');
 
-
 // родитель в который надо вставить сгенирированыне элементы
 const catalogListHtml = document.querySelector('.catalog-list--html');
 const catalogListJs = document.querySelector('.catalog-list--js');
-
 
 document.addEventListener("DOMContentLoaded", () => {
   page.classList.remove('no-js');
@@ -46,6 +44,3 @@ document.addEventListener("DOMContentLoaded", () => {
     cancelParall(promo);
   }
 });
-
-
-

@@ -2,10 +2,10 @@
   // animation: colorChange 40s linear infinite alternate both;
   // animation: colorChangeAnimistaDark 20s linear infinite alternate both;
   // animation-direction: alternate;
-
   @media (prefers-color-scheme: light) {
     background: #13c0fb;
   }
+
   @media (prefers-color-scheme: dark) {
     background: #3a94a3;
   }

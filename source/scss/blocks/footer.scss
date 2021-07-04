@@ -1,12 +1,12 @@
 .footer {
   padding: 25px 0 0;
 }
+
 .footer__container {
   display: grid;
   align-items: center;
   justify-items: center;
   gap: 20px;
-  // grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
 .footer__contacts {
