@@ -1,5 +1,18 @@
 const catalogHtml = [
   {
+    "projectName": "SmartDevice",
+    "classActive": true,
+    "dataFilter": "html-css",
+    "img": "smartdevice-desktop.png",
+    "img2x": "",
+    "imgTypeWebp1x": "smartdevice-desktop.webp",
+    "imgTypeWebp2x": "",
+    "imgAlt": "превью сайта SmartDevice",
+    "projectLink": "#",
+    "projectGithubLink": "#",
+    "projectDesc": "Удаленная стажировка - Акселератор HTML Academy. Работа по техническому заданию и с критериями качества",
+  },
+  {
     "projectName": "Велосипеды",
     "classActive": true,
     "dataFilter": "html-css",
@@ -23,7 +36,7 @@ const catalogHtml = [
     "imgAlt": "Превью сайт о путешествиях",
     "projectLink": "https://askomarov.github.io/komarov_way/",
     "projectGithubLink": "https://github.com/askomarov/komarov_way",
-    "projectDesc": "Адаптивная страница. С использованием gulp, препроцессоров,адаптивных изображений. Не много JavaScript",
+    "projectDesc": "Адаптивная страница. С использованием gulp, препроцессоров, адаптивных изображений. Не много JavaScript",
   },
   {
     "projectName": "Попутчики",

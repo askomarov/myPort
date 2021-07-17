@@ -1081,13 +1081,14 @@ input[id="check-all"]:checked + label .icon-check-all__arrow {
   align-content: center;
   text-align: center;
   height: 100%;
-  width: 100%;
-  max-width: 75%; }
+  width: 100%; }
   @media (min-width: 767.98px) {
-    .promo__container:hover .promo__text {
-      -webkit-text-decoration-color: #62d0df;
-              text-decoration-color: #62d0df;
-      text-underline-offset: 0.4em; } }
+    .promo__container {
+      max-width: 75%; }
+      .promo__container:hover .promo__text {
+        -webkit-text-decoration-color: #62d0df;
+                text-decoration-color: #62d0df;
+        text-underline-offset: 0.4em; } }
 
 .promo__img {
   z-index: 2;
@@ -1108,7 +1109,8 @@ input[id="check-all"]:checked + label .icon-check-all__arrow {
   font-weight: 300;
   font-size: 36px;
   line-height: 42px;
-  z-index: 1; }
+  z-index: 1;
+  cursor: default; }
   @media (min-width: 767.98px) {
     .promo__title {
       max-width: 350px; } }
@@ -1122,7 +1124,8 @@ input[id="check-all"]:checked + label .icon-check-all__arrow {
   text-underline-offset: 0.2em;
   transition: text-underline-offset 300ms, -webkit-text-decoration-color 300ms;
   transition: text-decoration-color 300ms, text-underline-offset 300ms;
-  transition: text-decoration-color 300ms, text-underline-offset 300ms, -webkit-text-decoration-color 300ms; }
+  transition: text-decoration-color 300ms, text-underline-offset 300ms, -webkit-text-decoration-color 300ms;
+  cursor: default; }
 
 .promo__rotate-wrap {
   position: relative;
@@ -1143,6 +1146,7 @@ input[name="profile"]:focus + .promo__btn, input[name="profile"]:focus-visible +
   box-shadow: 0 0 3px 0, 0 0 0 3px black; }
 
 .promo__btn {
+  cursor: pointer;
   z-index: 5;
   width: 48px;
   height: 48px;
