@@ -9,6 +9,9 @@
   @media (prefers-color-scheme: dark) {
     background: #3a94a3;
   }
+  &.lock {
+    overflow: hidden;
+  }
 }
 
 .main-title {

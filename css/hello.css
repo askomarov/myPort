@@ -1,0 +1,28 @@
+.hello {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  z-index: 50;
+  font-size: 20vh;
+  color: #87b8d0bd;
+  background: #22356f;
+  opacity: 1;
+  transition: all 2s ease 0s;
+  overflow: hidden;
+}
+
+.hello.loaded {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.hello span {
+  display: none;
+}

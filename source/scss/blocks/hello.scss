@@ -1,0 +1,38 @@
+.hello {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  z-index: 50;
+  font-size: clamp(50px, 10vw, 100px);
+  color: #87b8d0bd;
+  background: #22356f;
+  opacity: 1;
+  transition: all 0.3s ease 0s;
+  overflow: hidden;
+
+  &.loaded {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateY(-100%);
+  }
+
+  .hello__typing-text {
+    max-width: 90%;
+    text-align: center;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  span:not(.hello__typing-text) {
+    display: none;
+  }
+}

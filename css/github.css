@@ -1,0 +1,32 @@
+.github {
+  background: black;
+  padding: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s ease 0s;
+}
+
+.github__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  fill: white;
+  background: black;
+  border-radius: 50%;
+  transition: all 0.5s ease-in-out 0s;
+  position: relative;
+  overflow: hidden;
+  border: 0;
+}
+
+.github__link svg {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+.github__link:focus {
+  box-shadow: 0 0 3 0 0 white;
+}

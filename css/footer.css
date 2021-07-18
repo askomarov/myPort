@@ -1,0 +1,14 @@
+.footer {
+  padding: 25px 0 0;
+}
+
+.footer__container {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  gap: 20px;
+}
+
+.footer__contacts {
+  margin-bottom: 20px;
+}
