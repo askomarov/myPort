@@ -33,11 +33,21 @@ const welcome = () => {
   }
 };
 
-
+const helloBtn = document.querySelector('.hello-btn');
+const onBtnClickOpenHelloWindow = () => {
+  helloBtn.addEventListener('click', () => {
+    if (helloBlock.classList.contains('loaded')) {
+      helloBlock.classList.remove('loaded');
+      setTimeout(() => {
+        helloBlock.classList.add('loaded');
+      }, 2500)
+    }
+  })
+}
 
 document.addEventListener("DOMContentLoaded", () => {
   page.classList.remove('no-js');
-  
+
   welcome();
 
 
@@ -66,5 +76,8 @@ document.addEventListener("DOMContentLoaded", () => {
     cancelParall(promo);
   }
 
+  if (helloBtn) {
+    onBtnClickOpenHelloWindow();
+  }
 
 });

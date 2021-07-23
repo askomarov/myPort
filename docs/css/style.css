@@ -472,6 +472,54 @@ h6 {
     transform-origin: bottom;
     opacity: 1; } }
 
+@-webkit-keyframes ticker {
+  0%,
+  100% {
+    transform: rotate(0); }
+  10%,
+  30%,
+  50%,
+  70% {
+    transform: rotate(-15deg); }
+  20%,
+  40%,
+  60% {
+    transform: rotate(15deg); }
+  80% {
+    transform: rotate(10deg); }
+  90% {
+    transform: rotate(-10deg); } }
+
+@keyframes ticker {
+  0%,
+  100% {
+    transform: rotate(0); }
+  10%,
+  30%,
+  50%,
+  70% {
+    transform: rotate(-15deg); }
+  20%,
+  40%,
+  60% {
+    transform: rotate(15deg); }
+  80% {
+    transform: rotate(10deg); }
+  90% {
+    transform: rotate(-10deg); } }
+
+@-webkit-keyframes wakeup {
+  0% {
+    transform: rotate(180deg) scale(0); }
+  100% {
+    transform: rotate(180deg) scale(1); } }
+
+@keyframes wakeup {
+  0% {
+    transform: rotate(180deg) scale(0); }
+  100% {
+    transform: rotate(180deg) scale(1); } }
+
 .waves {
   position: relative;
   width: 100%;
@@ -596,13 +644,13 @@ h6 {
   color: #87b8d0bd;
   background: #22356f;
   opacity: 1;
-  transition: all 0.3s ease 0s;
+  transition: transform 1s ease 0s, opacity 0.5s ease 0.2s, border-radius 0.5s ease 0s;
   overflow: hidden; }
   .hello.loaded {
     opacity: 0;
-    visibility: hidden;
     pointer-events: none;
-    transform: translateY(-100%); }
+    transform: translateY(-100%) scale(0);
+    border-radius: 50%; }
   .hello .hello__typing-text {
     max-width: 90%;
     text-align: center;
@@ -613,6 +661,26 @@ h6 {
     transform: translate(-50%, -50%); }
   .hello span:not(.hello__typing-text) {
     display: none; }
+
+.hello-btn {
+  cursor: pointer;
+  z-index: 50;
+  position: absolute;
+  top: 0;
+  left: 90%;
+  border: 0;
+  background: transparent;
+  transform: rotate(0) scale(0);
+  -webkit-animation: wakeup 1s ease 2s alternate forwards;
+          animation: wakeup 1s ease 2s alternate forwards; }
+  .hello-btn svg {
+    pointer-events: none;
+    -webkit-animation: ticker 5s ease-out 2s 2 alternate forwards;
+            animation: ticker 5s ease-out 2s 2 alternate forwards;
+    transform-origin: bottom center; }
+  @media (max-width: 500px) {
+    .hello-btn {
+      left: 0; } }
 
 .lucky {
   min-height: 100vh;
