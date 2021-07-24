@@ -6,6 +6,7 @@
   grid-template-columns: 1fr;
   justify-items: center;
   align-items: center;
+  overflow: hidden;
 
   @media (max-height: 600px) {
     height: auto;
@@ -15,20 +16,27 @@
     height: auto;
   }
 }
+.promo__promo-text {
+}
 
 .promo__container {
   display: grid;
   grid-template-columns: 1fr;
-  justify-items: center;
-  align-content: center;
-  text-align: center;
   height: 100%;
   width: 100%;
   position: relative;
+  // align-items: center;
+  align-content: center;
+  justify-items: center;
+  gap: 24px;
 
   @media (min-width: $width-tablet+px) {
-    max-width: 75%;
-
+    grid-template-columns: 2fr 1fr;
+    gap: 0;
+    align-items: center;
+    justify-items: center;
+    align-content: center;
+    text-align: center;
     &:hover {
       .promo__text {
         text-decoration-color: #62d0df;
