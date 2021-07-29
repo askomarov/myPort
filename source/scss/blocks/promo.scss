@@ -17,6 +17,20 @@
   }
 }
 .promo__promo-text {
+  position: relative;
+  user-select: none;
+
+  @media (min-width: $width-tablet+px) {
+    &::after {
+      content: "";
+      position: absolute;
+      width: 5px;
+      height: 100%;
+      top: 0;
+      left: -8%;
+      background: black;
+    }
+  }
 }
 
 .promo__container {
@@ -95,7 +109,8 @@ input[name="profile"] {
   &:checked {
     + .promo__btn {
       box-shadow: 0 0 3px 0;
-
+      color: #ffffff;
+      background: #000;
       span {
         transform: rotate(135deg);
       }
@@ -110,7 +125,7 @@ input[name="profile"] {
   &:focus-visible,
   &:focus-within {
     + .promo__btn {
-      box-shadow: 0 0 3px 0, 0 0 0 3px black;
+      box-shadow: 0 0 3px 0, 0 0 0 3px #000;
     }
   }
 }
@@ -120,7 +135,8 @@ input[name="profile"] {
   z-index: 5;
   width: 48px;
   height: 48px;
-  background: chartreuse;
+  background: #ffffff;
+  color: #000000;
   position: absolute;
   bottom: 0;
   right: 0;
@@ -132,7 +148,7 @@ input[name="profile"] {
   transition: all 0.3s ease 0s;
 
   span {
-    transition: all 0.3s ease-in-out 0s;
+    transition: transform 0.3s ease-in-out 0s;
     display: inline-block;
     font-size: 30px;
   }
