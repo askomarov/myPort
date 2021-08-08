@@ -7,7 +7,10 @@
   }
 
   @media (prefers-color-scheme: dark) {
-    background: #3a94a3 url("../img/decor-img-1.svg") no-repeat;
+    background: #3a94a3;
+    background: #3a94a3 url("../img/decor-img-2.svg") no-repeat;
+    background-position: right top;
+    background-size: contain;
   }
   &.lock {
     overflow: hidden;
