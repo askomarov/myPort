@@ -24,7 +24,7 @@ const ghPages = require('gh-pages');
 const webpack = require('webpack-stream');
 // gh-pages
 const deploy = (cb) => {
-  ghPages.publish(path.join(process.cwd(), './docs'), cb);
+  ghPages.publish(path.join(process.cwd(), './dist'), cb);
 };
 exports.deploy = deploy;
 
@@ -32,7 +32,7 @@ exports.deploy = deploy;
 const server = (done) => {
   sync.init({
     server: {
-      baseDir: "docs/"
+      baseDir: "dist/"
     },
     port: 3000,
     cors: true,
@@ -56,7 +56,7 @@ const sprite = () => {
     // }))
     .pipe(svgstore())
     .pipe(rename("sprite.svg"))
-    .pipe(gulp.dest("docs/img"));
+    .pipe(gulp.dest("dist/img"));
 };
 exports.sprite = sprite;
 
@@ -89,7 +89,7 @@ const html = (params) => {
       collapseWhitespace: true,
       removeComments: true
     }))
-    .pipe(gulp.dest('docs'))
+    .pipe(gulp.dest('dist'))
     .pipe(sync.stream());
 };
 exports.html = html;
@@ -103,11 +103,11 @@ const styles = (params) => {
     .pipe(postcss([
       autoprefixer()
     ]))
-    .pipe(gulp.dest("docs/css"))
+    .pipe(gulp.dest("dist/css"))
     .pipe(csso())
     .pipe(rename('style.min.css'))
     .pipe(sourcemap.write(".")) //положил файл с картами кодами в корневую папку
-    .pipe(gulp.dest("docs/css")) //галп положи файлы в папку.
+    .pipe(gulp.dest("dist/css")) //галп положи файлы в папку.
     .pipe(sync.stream());
 };
 exports.styles = styles;  //говорим галпу что есть теперь такая задача
@@ -120,7 +120,7 @@ const scripts = () => {
     //   suffix: '.min'
     // }))
     .pipe(webpack(require('./webpack.config.js')))
-    .pipe(gulp.dest('docs/js'))
+    .pipe(gulp.dest('dist/js'))
     .pipe(sync.stream());
 }
 exports.scripts = scripts;
@@ -134,13 +134,13 @@ const copy = () => {
   ], {
     base: "source"
   })
-    .pipe(gulp.dest("docs"));
+    .pipe(gulp.dest("dist"));
 };
 exports.copy = copy;
 
 //clean
 const clean = (params) => {
-  return del("docs");
+  return del("dist");
 };
 exports.clean = clean;
 

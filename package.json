@@ -30,7 +30,7 @@
   "scripts": {
     "start": "gulp",
     "build": "gulp build",
-    "start-webpack": "browser-sync start --server \"docs/\" --no-ui --files \"source/**/*.js\"",
+    "start-webpack": "browser-sync start --server \"dist/\" --no-ui --files \"source/**/*.js\"",
     "build-webpack": "webpack --mode production",
     "test": "npm run editorconfig && npm run stylelint",
     "editorconfig": "editorconfig-cli",
