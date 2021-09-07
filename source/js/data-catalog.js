@@ -1,5 +1,18 @@
 const catalogHtml = [
   {
+    "projectName": "Jewellery",
+    "classActive": true,
+    "dataFilter": "html-css",
+    "img": "askomarov-jewellery3.jpg",
+    "img2x": undefined,
+    "imgTypeWebp1x": "askomarov-jewellery3.webp",
+    "imgTypeWebp2x": undefined,
+    "imgAlt": "превью сайта Jewellery",
+    "projectLink": "https://askomarov.github.io/jewellery3/main.html",
+    "projectGithubLink": "https://github.com/askomarov/jewellery3",
+    "projectDesc": "Удаленная стажировка - Акселератор HTML Academy. Работа по техническому заданию и с критериями качества. Slider Swiper.js",
+  },
+  {
     "projectName": "SmartDevice",
     "classActive": true,
     "dataFilter": "html-css",
@@ -8,8 +21,8 @@ const catalogHtml = [
     "imgTypeWebp1x": "smartdevice-desktop.webp",
     "imgTypeWebp2x": undefined,
     "imgAlt": "превью сайта SmartDevice",
-    "projectLink": "#",
-    "projectGithubLink": "#",
+    "projectLink": "https://askomarov.github.io/smart-device/",
+    "projectGithubLink": "https://github.com/askomarov/smart-device",
     "projectDesc": "Удаленная стажировка - Акселератор HTML Academy. Работа по техническому заданию и с критериями качества",
   },
   {
