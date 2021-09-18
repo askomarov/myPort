@@ -4,7 +4,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  align-items: flex-start;
+  text-align: center;
 
   @media (min-width: $width-tablet+px) {
     flex-direction: row;
@@ -28,7 +28,6 @@
   @media (min-width: $width-tablet+px) {
     font-size: 20px;
     line-height: 20px;
-
   }
 
   &:hover,
@@ -74,11 +73,11 @@
     }
 
     &--skills::before {
-      content: "навыки";
+      content: "skills";
     }
 
     &--catalog::before {
-      content: "каталог";
+      content: "catalog";
     }
   }
 }

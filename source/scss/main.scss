@@ -1,13 +1,17 @@
 .page {
+  @media (max-width: 1250px) {
+    background-image: url("../img/decor-img-2.svg");
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-size: contain;
+  }
+
   @media (prefers-color-scheme: light) {
-    background: #13c0fb;
+    background-color: #13c0fb;
   }
 
   @media (prefers-color-scheme: dark) {
-    background: #3a94a3;
-    background: #3a94a3 url("../img/decor-img-2.svg") no-repeat;
-    background-position: right top;
-    background-size: contain;
+    background-color: #3a94a3;
   }
   &.lock {
     overflow: hidden;
@@ -24,6 +28,9 @@
   //   background: blue;
   //   border-radius: 10px;
   // }
+}
+.main {
+  
 }
 
 .main-title {

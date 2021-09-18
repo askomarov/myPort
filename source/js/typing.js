@@ -12,3 +12,17 @@ const typing = (text, elem, delay) => {
 };
 
 export { typing };
+
+const typingOptions = {
+  strings: [
+    "HTML",
+    "CSS",
+    "JS"
+  ],
+  typeSpeed: 50,
+  backSpeed: 40,
+  loop: true,
+  loopCount: Infinity
+};
+
+let typed = new Typed("#typed-promo-text", typingOptions);

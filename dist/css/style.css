@@ -176,16 +176,20 @@ h6 {
   clip: rect(0 0 0 0);
   overflow: hidden; }
 
+@media (max-width: 1250px) {
+  .page {
+    background-image: url("../img/decor-img-2.svg");
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-size: contain; } }
+
 @media (prefers-color-scheme: light) {
   .page {
-    background: #13c0fb; } }
+    background-color: #13c0fb; } }
 
 @media (prefers-color-scheme: dark) {
   .page {
-    background: #3a94a3;
-    background: #3a94a3 url("../img/decor-img-2.svg") no-repeat;
-    background-position: right top;
-    background-size: contain; } }
+    background-color: #3a94a3; } }
 
 .page.lock {
   overflow: hidden; }
@@ -523,6 +527,15 @@ h6 {
   100% {
     transform: rotate(180deg) scale(1); } }
 
+.magick {
+  transition: all 0.5s ease-in-out 0s; }
+  .magick--hide {
+    opacity: 0;
+    transform: skewX(315deg) translateX(-100%); }
+  .magick--show {
+    opacity: 1;
+    transform: translateX(0); }
+
 .waves {
   position: relative;
   width: 100%;
@@ -704,6 +717,19 @@ h6 {
 
 .header {
   position: relative; }
+  @media (min-width: 1250px) {
+    .header::after {
+      content: "";
+      width: 100%;
+      height: 450px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      background-image: url("../img/waves-bg.svg");
+      background-repeat: no-repeat;
+      z-index: -1;
+      background-size: cover; } }
 
 .header__body {
   padding-top: 12px;
@@ -829,7 +855,7 @@ h6 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  align-items: flex-start; }
+  text-align: center; }
   @media (min-width: 767.98px) {
     .site-list {
       flex-direction: row;
@@ -871,9 +897,9 @@ h6 {
       white-space: nowrap;
       color: #000000; }
     .site-list__link-text--skills::before {
-      content: "навыки"; }
+      content: "skills"; }
     .site-list__link-text--catalog::before {
-      content: "каталог"; } }
+      content: "catalog"; } }
 
 @media (min-width: 767.98px) {
   .catalog {
@@ -1372,6 +1398,15 @@ input[name="profile"]:focus + .promo__btn, input[name="profile"]:focus-visible +
 .promo-text__decs {
   font-size: clamp(16px, 2vw, 30px); }
 
+.promo-text__decs-typing-text {
+  font-weight: 900;
+  font-size: clamp(20px, 2vw, 30px);
+  text-shadow: 0 0 1px #fff; }
+  @media (min-width: 1300px) {
+    .promo-text__decs-typing-text {
+      color: #5155e5;
+      text-shadow: 0 0 3px #fff; } }
+
 .github {
   background: black;
   padding: 20px 0;
@@ -1414,18 +1449,15 @@ input[name="profile"]:focus + .promo__btn, input[name="profile"]:focus-visible +
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
   gap: 20px;
-  margin: 0 auto;
-  opacity: 0;
-  transform: skewX(315deg) translateX(-100%);
-  transition: all 0.5s ease-in-out 0s; }
+  margin: 0 auto; }
   @media (min-width: 767.98px) {
     .skills__list {
       -moz-column-gap: 50px;
            column-gap: 50px; } }
-  .skills__list.magick {
+  .skills__list.magick--show {
     opacity: 1;
     transform: translateX(0); }
-    .skills__list.magick .skills__item {
+    .skills__list.magick--show .skills__item {
       -webkit-animation: swing-in-bottom-fwd 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) both 0.5s;
               animation: swing-in-bottom-fwd 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) both 0.5s; }
 

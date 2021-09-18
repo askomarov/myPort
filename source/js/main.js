@@ -13,6 +13,8 @@ const headerMenu = document.querySelector(".site-list");
 const skilsList = document.querySelector('.skills__list');
 const promo = document.querySelector('.promo__container');
 
+const contactsList = document.querySelector('.contacts__list-footer');
+
 // родитель в который надо вставить сгенирированыне элементы
 const catalogListHtml = document.querySelector('.catalog-list--html');
 const catalogListJs = document.querySelector('.catalog-list--js');
@@ -43,7 +45,9 @@ const onBtnClickOpenHelloWindow = () => {
       }, 2500)
     }
   })
-}
+};
+
+let text2 = document.querySelector('.promo-text__decs');
 
 document.addEventListener("DOMContentLoaded", () => {
   page.classList.remove('no-js');
@@ -61,11 +65,31 @@ document.addEventListener("DOMContentLoaded", () => {
   window.onscroll = () => {
     // console.log('прокрутили на ' + window.pageYOffset);
     // console.log('высота viewport ' + document.body.clientHeight);
+    // if (window.pageYOffset + document.body.clientHeight > skilsList.offsetTop + 50) {
+    //   skilsList.classList.add('magick');
+    // } else {
+    //   skilsList.classList.remove('magick');
+    // }
     if (window.pageYOffset + document.body.clientHeight > skilsList.offsetTop + 50) {
-      skilsList.classList.add('magick');
+      console.log('hi');
+      skilsList.classList.remove('magick--hide');
+      skilsList.classList.add('magick--show');
     } else {
-      skilsList.classList.remove('magick');
+      console.log('no');
+      skilsList.classList.add('magick--hide');
+      skilsList.classList.remove('magick--show');
     }
+
+    if (window.pageYOffset + document.body.clientHeight > contactsList.offsetTop + 50) {
+      console.log('hi');
+      contactsList.classList.remove('magick--hide');
+      contactsList.classList.add('magick--show');
+    } else {
+      console.log('no');
+      contactsList.classList.add('magick--hide');
+      contactsList.classList.remove('magick--show');
+    }
+
     showLinkOnTop();
   };
 
