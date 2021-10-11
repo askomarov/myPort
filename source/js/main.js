@@ -5,6 +5,7 @@ import { onHoverBLockFollowCursor, cancelParall } from './parall.js';
 import { createCatalogItems } from './render-catalog.js';
 import { catalogHtml, catalogJs } from './data-catalog.js';
 import { typing } from './typing.js';
+import { initSmoothScroll } from './smoothScroll.js';
 
 const page = document.querySelector(".page");
 const headerMenuToggle = document.querySelector(".header-menu__toggle");
@@ -71,21 +72,17 @@ document.addEventListener("DOMContentLoaded", () => {
     //   skilsList.classList.remove('magick');
     // }
     if (window.pageYOffset + document.body.clientHeight > skilsList.offsetTop + 50) {
-      console.log('hi');
       skilsList.classList.remove('magick--hide');
       skilsList.classList.add('magick--show');
     } else {
-      console.log('no');
       skilsList.classList.add('magick--hide');
       skilsList.classList.remove('magick--show');
     }
 
     if (window.pageYOffset + document.body.clientHeight > contactsList.offsetTop + 50) {
-      console.log('hi');
       contactsList.classList.remove('magick--hide');
       contactsList.classList.add('magick--show');
     } else {
-      console.log('no');
       contactsList.classList.add('magick--hide');
       contactsList.classList.remove('magick--show');
     }
@@ -103,5 +100,7 @@ document.addEventListener("DOMContentLoaded", () => {
   if (helloBtn) {
     onBtnClickOpenHelloWindow();
   }
+
+  initSmoothScroll();
 
 });
