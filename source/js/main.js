@@ -1,3 +1,4 @@
+const scrollIntoView = require('scroll-into-view');
 import { headerMenuToggler } from './header-menu.js';
 import { filterItems } from './catalog-filter.js';
 import { showLinkOnTop, onLinkOnTopClick } from './link-on-top.js';
@@ -5,7 +6,47 @@ import { onHoverBLockFollowCursor, cancelParall } from './parall.js';
 import { createCatalogItems } from './render-catalog.js';
 import { catalogHtml, catalogJs } from './data-catalog.js';
 import { typing } from './typing.js';
-import { initSmoothScroll } from './smoothScroll.js';
+// import { initSmoothScroll } from './smoothScroll.js';
+
+let iOS = () => {
+  return [
+    'iPad Simulator',
+    'iPhone Simulator',
+    'iPod Simulator',
+    'iPad',
+    'iPhone',
+    'iPod'
+  ].includes(navigator.platform)
+    // iPad on iOS 13 detection
+    || (navigator.userAgent.includes("Mac") && "ontouchend" in document)
+};
+let anchorLinks = document.querySelectorAll('a[href^="#"');
+const initSmoothScroll = () => {
+
+  anchorLinks.forEach(link => {
+
+    link.addEventListener('click', function (e) {
+      e.preventDefault();
+
+      let href = this.getAttribute('href').substring(1);
+
+      const scrollTarget = document.getElementById(href);
+      scrollIntoView(scrollTarget);
+
+      // const topOffset = document.querySelector('.scrollto').offsetHeight;
+      // const topOffset = 0; // если не нужен отступ сверху
+      // const elementPosition = scrollTarget.getBoundingClientRect().top;
+      // const offsetPosition = elementPosition - topOffset;
+
+      // window.scrollBy({
+      //   top: offsetPosition,
+      //   behavior: 'smooth'
+      // });
+      console.log('clickc');
+    });
+  });
+
+};
 
 const page = document.querySelector(".page");
 const headerMenuToggle = document.querySelector(".header-menu__toggle");
@@ -101,6 +142,7 @@ document.addEventListener("DOMContentLoaded", () => {
     onBtnClickOpenHelloWindow();
   }
 
-  initSmoothScroll();
-
+    if (iOS()) {
+        initSmoothScroll();
+  }
 });
