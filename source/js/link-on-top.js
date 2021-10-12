@@ -10,16 +10,6 @@ const showLinkOnTop = () => {
   // };
 };
 
-const onLinkOnTopClick = () => {
-  if (linkOnTop) {
-    linkOnTop.addEventListener('click', (evt) => {
-      evt.preventDefault();
-      window.scrollTo(0, 0);
-    })
-  }
-}
-// window.onscroll = () => {
-// showLinkOnTop();
-// };
 
-export { showLinkOnTop, onLinkOnTopClick };
+
+export { showLinkOnTop };

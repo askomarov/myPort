@@ -10,7 +10,7 @@ const catalogHtml = [
     "imgAlt": "превью сайта Jewellery",
     "projectLink": "https://askomarov.github.io/jewellery3/main.html",
     "projectGithubLink": "https://github.com/askomarov/jewellery3",
-    "projectDesc": "Удаленная стажировка - Акселератор HTML Academy. Работа по техническому заданию и с критериями качества. Slider Swiper.js",
+    "projectDesc": "Remote Internship - HTML Academy Accelerator. Work according to the terms of reference and with quality criteria. Slider Swiper.js",
   },
   {
     "projectName": "SmartDevice",
@@ -23,10 +23,10 @@ const catalogHtml = [
     "imgAlt": "превью сайта SmartDevice",
     "projectLink": "https://askomarov.github.io/smart-device/",
     "projectGithubLink": "https://github.com/askomarov/smart-device",
-    "projectDesc": "Удаленная стажировка - Акселератор HTML Academy. Работа по техническому заданию и с критериями качества",
+    "projectDesc": "Remote Internship - HTML Academy Accelerator. Work according to the terms of reference and with quality criteria. Modal window of the feedback form.",
   },
   {
-    "projectName": "Велосипеды",
+    "projectName": "Bicycle shop",
     "classActive": true,
     "dataFilter": "html-css",
     "img": "bikes-tablet.jpg",
@@ -36,10 +36,10 @@ const catalogHtml = [
     "imgAlt": "превью сайта велосипедов",
     "projectLink": "https://askomarov.github.io/bicycle/",
     "projectGithubLink": "https://github.com/askomarov/bicycle",
-    "projectDesc": "Проект выполнен в рамках обучения работе в команде - Акселератор HTML Academy. Работа по техническому заданию с критериями качества, с использованием сборки Лиги А",
+    "projectDesc": "Remote Internship - HTML Academy Accelerator. Super simple page, responsive, desktop first.",
   },
   {
-    "projectName": "Путешествия",
+    "projectName": "Ways to travel",
     "classActive": true,
     "dataFilter": "html-css",
     "img": "komarov-way-2.jpg",
@@ -49,10 +49,10 @@ const catalogHtml = [
     "imgAlt": "Превью сайт о путешествиях",
     "projectLink": "https://askomarov.github.io/komarov_way/",
     "projectGithubLink": "https://github.com/askomarov/komarov_way",
-    "projectDesc": "Адаптивная страница. С использованием gulp, препроцессоров, адаптивных изображений. Не много JavaScript",
+    "projectDesc": "responsive page. Using gulp, preprocessor scss, adaptive images (picture + webp). A little JavaScript - modal and validate form, tapbar.",
   },
   {
-    "projectName": "Попутчики",
+    "projectName": "Fellow travelers",
     "classActive": true,
     "dataFilter": "html-css",
     "img": "img-pognali@1xdesktop.jpg",
@@ -62,10 +62,10 @@ const catalogHtml = [
     "imgAlt": "Превью сайт попутчиков для путешествий",
     "projectLink": "https://askomarov.github.io/pognaliHtmlAcademy/",
     "projectGithubLink": "https://github.com/askomarov/pognaliHtmlAcademy",
-    "projectDesc": "Адаптивный трех-страничный сайт, с огромным количеством трудоемких элементов, оживленный с помощью JavaScript. С использованием gulp, препроцессоров, адаптивных изображений",
+    "projectDesc": "An adaptive three-page website, with a huge number of time-consuming elements, animated with JavaScript, burger menu, accordion, modal etc.. Using gulp, scss preprocessor, adaptive images.",
   },
   {
-    "projectName": "Рукоделие",
+    "projectName": "Needlework",
     "classActive": true,
     "dataFilter": "html-css",
     "img": "mishka-preview.jpg",
@@ -75,10 +75,10 @@ const catalogHtml = [
     "imgAlt": "Превью сайт вязанные вещи ручной работы",
     "projectLink": "https://askomarov.github.io/mishka/",
     "projectGithubLink": "https://github.com/askomarov/mishka",
-    "projectDesc": "Адаптивный трех-страничный mobile-first сайт. С использованием сборки gulp, препроцессора Sass.Не много JavaScript",
+    "projectDesc": "Adaptive three-page mobile-first website. Using the gulp, the Sass preprocessor. A little JavaScript.",
   },
   {
-    "projectName": "Корм для кошек",
+    "projectName": "Cat food",
     "classActive": true,
     "dataFilter": "html-css",
     "img": "img-catenergy.jpg",
@@ -88,10 +88,10 @@ const catalogHtml = [
     "imgAlt": "Превью сайт питание для кошек",
     "projectLink": "https://askomarov.github.io/CatFromAcademy/index.html",
     "projectGithubLink": "https://github.com/askomarov/CatFromAcademy",
-    "projectDesc": "Адаптивный трех-страничный сайт. С использованием gulp, препроцессоров, адаптивных изображений",
+    "projectDesc": "Adaptive three-page website. Using gulp, css preprocessor, adaptive images.",
   },
   {
-    "projectName": "Магазин мороженого",
+    "projectName": "Ice Cream Shop",
     "classActive": true,
     "dataFilter": "html-css",
     "img": "img-gllacy.jpg",
@@ -101,10 +101,10 @@ const catalogHtml = [
     "imgAlt": "Превью сайта мороженного",
     "projectLink": "https://askomarov.github.io/1422707-gllacy-29/",
     "projectGithubLink": "https://github.com/askomarov/1422707-gllacy-29",
-    "projectDesc": "Двустраничный, неадаптивный, но красочный сайт",
+    "projectDesc": "A two-page, non-adaptive, but colorful website with catalog. A little JavaScript. Stylized form elements.",
   },
   {
-    "projectName": "Туристический город",
+    "projectName": "Tourist city",
     "classActive": true,
     "dataFilter": "html-css",
     "img": "img-sedona.jpg",
@@ -114,10 +114,10 @@ const catalogHtml = [
     "imgAlt": "превью сайта для туристов города Sedona",
     "projectLink": "https://askomarov.github.io/mySedonaByHtmlAcademy/",
     "projectGithubLink": "https://github.com/askomarov/mySedonaByHtmlAcademy",
-    "projectDesc": "Адаптивный трех-страничный сайт. С использованием gulp, препроцессоров",
+    "projectDesc": "Adaptive three-page website. Using gulp, scss preprocessor",
   },
   {
-    "projectName": "Элементы форм",
+    "projectName": "Catalog with stylized form elements",
     "classActive": true,
     "dataFilter": "html-css",
     "img": "img-city.jpg",
@@ -127,13 +127,13 @@ const catalogHtml = [
     "imgAlt": "Превью пример стилизации элементов форм",
     "projectLink": "https://askomarov.github.io/filter/",
     "projectGithubLink": "https://github.com/askomarov/filter",
-    "projectDesc": "Пример списка товаров с кастомными элементами формы",
+    "projectDesc": "Example of a catalog with stylized form elements",
   }
 ];
 
 const catalogJs = [
   {
-    "projectName": "Кекстаграм",
+    "projectName": "Kekstagram",
     "classActive": false,
     "dataFilter": "javascript",
     "img": "kekstagram.jpg",
@@ -143,10 +143,10 @@ const catalogJs = [
     "imgAlt": "Превью сайт почти инстаграмм",
     "projectLink": "https://askomarov.github.io/kekstagramByHTMLAcademy/",
     "projectGithubLink": "https://github.com/askomarov/kekstagramByHTMLAcademy",
-    "projectDesc": "Учебная работа с онлайн-курса по JavaScript - подобронее в репозитории",
+    "projectDesc": "Study work from an online course on JavaScript - more info in the repository",
   },
   {
-    "projectName": "Кексобукинг",
+    "projectName": "Keksobooking",
     "classActive": false,
     "dataFilter": "javascript",
     "img": "keksobooking.jpg",
@@ -156,7 +156,7 @@ const catalogJs = [
     "imgAlt": "Превью Кексобукинг поиск жилья в Токио",
     "projectLink": "https://askomarov.github.io/keksobookingByHTMLAcademy/",
     "projectGithubLink": "https://github.com/askomarov/keksobookingByHTMLAcademy",
-    "projectDesc": "Учебная работа с онлайн-курса по JavaScript - подобронее в репозитории",
+    "projectDesc": "Study work from an online course on JavaScript - more info in the repository",
   }
 ];
 

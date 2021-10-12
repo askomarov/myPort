@@ -1,7 +1,8 @@
 const scrollIntoView = require('scroll-into-view');
+
 import { headerMenuToggler } from './header-menu.js';
 import { filterItems } from './catalog-filter.js';
-import { showLinkOnTop, onLinkOnTopClick } from './link-on-top.js';
+import { showLinkOnTop } from './link-on-top.js';
 import { onHoverBLockFollowCursor, cancelParall } from './parall.js';
 import { createCatalogItems } from './render-catalog.js';
 import { catalogHtml, catalogJs } from './data-catalog.js';
@@ -20,6 +21,7 @@ let iOS = () => {
     // iPad on iOS 13 detection
     || (navigator.userAgent.includes("Mac") && "ontouchend" in document)
 };
+
 let anchorLinks = document.querySelectorAll('a[href^="#"');
 const initSmoothScroll = () => {
 
@@ -32,17 +34,6 @@ const initSmoothScroll = () => {
 
       const scrollTarget = document.getElementById(href);
       scrollIntoView(scrollTarget);
-
-      // const topOffset = document.querySelector('.scrollto').offsetHeight;
-      // const topOffset = 0; // если не нужен отступ сверху
-      // const elementPosition = scrollTarget.getBoundingClientRect().top;
-      // const offsetPosition = elementPosition - topOffset;
-
-      // window.scrollBy({
-      //   top: offsetPosition,
-      //   behavior: 'smooth'
-      // });
-      console.log('clickc');
     });
   });
 
@@ -131,8 +122,6 @@ document.addEventListener("DOMContentLoaded", () => {
     showLinkOnTop();
   };
 
-  onLinkOnTopClick();
-
   if (document.body.clientWidth > 768) {
     onHoverBLockFollowCursor(promo);
     cancelParall(promo);
@@ -142,7 +131,7 @@ document.addEventListener("DOMContentLoaded", () => {
     onBtnClickOpenHelloWindow();
   }
 
-    if (iOS()) {
-        initSmoothScroll();
+  if (iOS()) {
+    initSmoothScroll();
   }
 });
