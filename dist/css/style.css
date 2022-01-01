@@ -1267,8 +1267,6 @@ input[id="check-all"]:checked + label .icon-check-all__arrow {
   left: 0;
   width: 100%;
   height: 100%;
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
   -o-object-fit: cover;
      object-fit: cover;
   transition: all 0.5s ease 0s;
@@ -1356,8 +1354,6 @@ input[name="profile"]:focus + .promo__btn, input[name="profile"]:focus-visible +
   box-shadow: 0 0 10px 0 var(--opacity-black);
   border-radius: 50%;
   transform: rotateX(180deg);
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
   display: flex;
   align-items: center;
   justify-content: center; }
@@ -1369,12 +1365,14 @@ input[name="profile"]:focus + .promo__btn, input[name="profile"]:focus-visible +
       filter: brightness(1); }
 
 .rotate {
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
   z-index: 2;
   width: 250px;
   height: 250px;
   border-radius: 50%;
   transform-style: preserve-3d;
-  transition: all 0.6s ease 0s; }
+  transition: transform 0.3s ease 0s; }
   @media (min-width: 767.98px) {
     .rotate {
       width: 350px;
