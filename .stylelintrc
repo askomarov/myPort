@@ -1,9 +1,5 @@
 {
   "extends": "stylelint-config-htmlacademy",
-<<<<<<< HEAD
-=======
-
->>>>>>> 0f4bd526debe817349abba5a4b3cfb02914802ff
   "rules": {
     "declaration-no-important": true,
     "indentation": [2, {"ignore": ["inside-parens"]}]
