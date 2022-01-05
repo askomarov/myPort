@@ -1,0 +1,38 @@
+.footer-social {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+
+  @media (min-width: $width-tablet+px) {
+    gap: 20px;
+    width: auto;
+  }
+}
+
+.footer-social__item {
+  &:hover,
+  &:active {
+    .footer-social__link {
+      transition: all 0.2s ease 0s;
+      fill: rgba($color: #000000, $alpha: 0.7);
+
+      &[aria-label="Vkontakte"] {
+        fill: rgb(7, 119, 247);
+      }
+
+      &[aria-label="telegram"] {
+        fill: #30a3e6;
+      }
+
+      &[aria-label="instagram"] {
+        fill: rgb(245, 39, 176);
+      }
+    }
+  }
+}
+
+.footer-social__link {
+  fill: black;
+}

@@ -1,0 +1,78 @@
+$change-text-height: clamp(20px, 3vw, 36px);
+
+.change-text-wrap {
+  display: flex;
+  align-items: flex-start;
+  user-select: none;
+
+  p {
+    font-size: $change-text-height;
+    color: #0b236f;
+    line-height: $change-text-height;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: auto;
+    height: $change-text-height;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+
+    li {
+      position: relative;
+      font-size: $change-text-height;
+      line-height: $change-text-height;
+      animation: change-word ease 9s infinite;
+    }
+  }
+}
+
+@keyframes change-word {
+  0% {
+    color: #e75c37;
+  }
+
+  10% {
+    transform: translateY(-100%);
+    color: #287ebc;
+  }
+
+  25% {
+    transform: translateY(-200%);
+    color: #f7e22f;
+  }
+
+  35% {
+    transform: translateY(-300%);
+    color: #aa66fe;
+  }
+
+  50% {
+    transform: translateY(-400%);
+    color: #f2743e;
+  }
+
+  60% {
+    transform: translateY(-300%);
+    color: #aa66fe;
+  }
+
+  70% {
+    transform: translateY(-200%);
+    color: #f7e22f;
+  }
+
+  85% {
+    transform: translateY(-100%);
+    color: #287ebc;
+  }
+
+  100% {
+    transform: translateY(0%);
+    color: #e75c37;
+  }
+}

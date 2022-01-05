@@ -1,0 +1,104 @@
+.header {
+  position: relative;
+
+  @media (min-width: 1250px) {
+    &::after {
+      content: "";
+      width: 100%;
+      height: 450px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      background-image: url("../img/waves-bg.svg");
+      background-repeat: no-repeat;
+      z-index: -1;
+      background-size: cover;
+    }
+  }
+}
+
+.header__body {
+  padding-top: 12px;
+  padding-bottom: 9px;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  column-gap: 10px;
+
+  @media (min-width: $width-tablet+px) {
+    grid-template-columns: 1fr 3fr 1fr;
+  }
+}
+
+.header__logo {
+  @media (min-width: $width-desktop+px) {
+    justify-self: start;
+  }
+
+  svg {
+    fill: #000000;
+  }
+}
+
+.header-menu__toggle {
+  @media (max-width: $width-tablet+px) {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+  }
+}
+
+.header-menu__actions {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  gap: 10px;
+
+  @media (min-width: $width-tablet+px) {
+    justify-self: end;
+  }
+}
+
+.header-actions__item {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.header-actions__link {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 23px;
+  color: #3e0d41;
+
+  span {
+    white-space: nowrap;
+  }
+
+  svg {
+    margin-right: 10px;
+  }
+
+  &:hover {
+    fill: #30a3e6;
+    color: #30a3e6;
+  }
+
+  @media (min-width: $width-desktop+px) {
+    svg {
+      width: 32px;
+      height: 32px;
+    }
+  }
+
+  &:focus,
+  &:focus-visible,
+  &:focus-within {
+    outline: 1px solid black;
+    fill: #30a3e6;
+    color: #30a3e6;
+  }
+}

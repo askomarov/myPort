@@ -1,0 +1,42 @@
+.page {
+  @media (max-width: 1250px) {
+    background-image: url("../img/decor-img-2.svg");
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-size: contain;
+  }
+
+  @media (prefers-color-scheme: light) {
+    background-color: #13c0fb;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    background-color: #3a94a3;
+  }
+  &.lock {
+    overflow: hidden;
+  }
+  // &::-webkit-scrollbar {
+  //   width: 10px;
+  // }
+  // &::-webkit-scrollbar-track {
+  //   background: red;
+  //   border-radius: 10px;
+  // }
+  // &::-webkit-scrollbar-thumb {
+
+  //   background: blue;
+  //   border-radius: 10px;
+  // }
+}
+.main {
+  
+}
+
+.main-title {
+  font-size: clamp(20px, 3vw, 36px);
+  color: #0b236f;
+  line-height: clamp(24px, 3vw, 40px);
+  text-align: center;
+  margin-bottom: 12px;
+}

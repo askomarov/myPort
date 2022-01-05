@@ -1,0 +1,29 @@
+.promo-text {
+  text-align: center;
+  @media (min-width: $width-tablet+px) {
+    text-align: left;
+  }
+  line-height: 1.1;
+}
+.promo-text__job {
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+.promo-text__title {
+  font-size: clamp(24px, 5vw, 100px);
+  font-weight: 700;
+  text-shadow: 0 0 5px #fff;
+}
+.promo-text__decs {
+  // text-transform: uppercase;
+  font-size: clamp(16px, 2vw, 30px);
+}
+.promo-text__decs-typing-text {
+  font-weight: 900;
+  font-size: clamp(20px, 2vw, 30px);
+  text-shadow: 0 0 1px #fff;
+  @media (min-width: $width-desktop+px) {
+    color: #5155e5;
+    text-shadow: 0 0 3px #fff;
+  }
+}
