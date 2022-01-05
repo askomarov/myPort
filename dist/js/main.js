@@ -19,7 +19,7 @@ let iOS = () => {
     'iPod'
   ].includes(navigator.platform)
     // iPad on iOS 13 detection
-    || (navigator.userAgent.includes("Mac") && "ontouchend" in document)
+    || (navigator.userAgent.includes('Mac') && 'ontouchend' in document);
 };
 
 let anchorLinks = document.querySelectorAll('a[href^="#"');
@@ -39,9 +39,9 @@ const initSmoothScroll = () => {
 
 };
 
-const page = document.querySelector(".page");
-const headerMenuToggle = document.querySelector(".header-menu__toggle");
-const headerMenu = document.querySelector(".site-list");
+const page = document.querySelector('.page');
+const headerMenuToggle = document.querySelector('.header-menu__toggle');
+const headerMenu = document.querySelector('.site-list');
 
 const skilsList = document.querySelector('.skills__list');
 const promo = document.querySelector('.promo__container');
@@ -59,7 +59,7 @@ const welcome = () => {
     page.classList.add('lock');
     let typingTextParent = helloBlock.querySelector('.hello__typing-text');
     let text = helloBlock.textContent;
-    typing(text, typingTextParent, 50)
+    typing(text, typingTextParent, 50);
 
     setTimeout(() => {
       helloBlock.classList.add('loaded');
@@ -75,15 +75,30 @@ const onBtnClickOpenHelloWindow = () => {
       helloBlock.classList.remove('loaded');
       setTimeout(() => {
         helloBlock.classList.add('loaded');
-      }, 2500)
+      }, 2500);
     }
-  })
+  });
 };
 
-let text2 = document.querySelector('.promo-text__decs');
+// let text2 = document.querySelector('.promo-text__decs');
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener('DOMContentLoaded', () => {
+  // const typingOptions = {
+  //   strings: [
+  //     "HTML",
+  //     "CSS",
+  //     "JS"
+  //   ],
+  //   typeSpeed: 50,
+  //   backSpeed: 40,
+  //   loop: true,
+  //   loopCount: Infinity
+  // };
+
+  // let typed = new Typed("#typed-promo-text", typingOptions);
+
   page.classList.remove('no-js');
+
   welcome();
 
   headerMenuToggler(headerMenuToggle, headerMenu);
@@ -132,4 +147,18 @@ document.addEventListener("DOMContentLoaded", () => {
   if (iOS()) {
     initSmoothScroll();
   }
+
+  const typingOptions = {
+    strings: [
+      "HTML",
+      "CSS",
+      "JS"
+    ],
+    typeSpeed: 50,
+    backSpeed: 40,
+    loop: true,
+    loopCount: Infinity
+  };
+
+  let typed = new Typed("#typed-promo-text", typingOptions);
 });

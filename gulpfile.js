@@ -247,7 +247,6 @@ const copy = () => {
     base: "source"
   })
     .pipe(gulp.dest("dist"));
-<<<<<<< HEAD
 
 };
 
@@ -270,38 +269,3 @@ export { deployZIP }
 
 // Выполнение сценария по умолчанию
 gulp.task('default', dev)
-=======
-};
-exports.copy = copy;
-
-//clean
-const clean = (params) => {
-  return del("dist");
-};
-exports.clean = clean;
-
-function cb() {
-}
-
-// Watcher
-const watcher = () => {
-  gulp.watch(["source/**/*.html"], gulp.series("html"));
-  gulp.watch(["source/js/**/*.js"], gulp.series("scripts"));
-  gulp.watch(["source/scss/**/*.scss"], gulp.series("styles"));
-};
-exports.watcher = watcher;
-
-//build
-const build = gulp.series(
-  clean, gulp.parallel(
-    html,
-    styles,
-    scripts,
-    sprite), gulp.series(copy));
-exports.build = build;
-
-
-exports.default = gulp.series(
-  build, server, watcher
-);
->>>>>>> 0f4bd526debe817349abba5a4b3cfb02914802ff
