@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('html/head.html', {
+"title": "Askomarov - MyPotfolio",
+"description": "Artem Komarov portfolio site"
+})
+
+<body id="link-on-top" class="page no-js">
+  @@include('html/svg-sprite.html')
+
+  @@include('html/header.html')
+
+  <main class="main">
+    @@include('html/promo.html')
+
+    @@include('html/github.html')
+    @@include('html/skills.html')
+
+    @@include('html/catalog.html')
+    <a href="#link-on-top" class="link-on-top">
+      <span class="link-to-top__ball"></span>
+    </a>
+  </main>
+
+  @@include('html/footer.html')
+  <script src="js/main.bundle.js"></script>
+</body>
+
+</html>

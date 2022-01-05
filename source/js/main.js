@@ -84,6 +84,7 @@ let text2 = document.querySelector('.promo-text__decs');
 
 document.addEventListener("DOMContentLoaded", () => {
   page.classList.remove('no-js');
+
   welcome();
 
   headerMenuToggler(headerMenuToggle, headerMenu);
