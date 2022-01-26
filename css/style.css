@@ -1462,7 +1462,8 @@ input[id="check-all"]:checked + label .icon-check-all__arrow {
   transition: all 0.5s ease 0s;
   border-radius: 50%;
   -webkit-box-shadow: var(--shadow);
-          box-shadow: var(--shadow); }
+          box-shadow: var(--shadow);
+  pointer-events: none; }
 
 .promo__title {
   font-weight: 300;
@@ -1555,6 +1556,10 @@ input[name="profile"]:focus + .promo__btn, input[name="profile"]:focus-visible +
       margin-bottom: 30px; } }
 
 .promo__contact {
+  -webkit-transform: rotateX(180deg);
+          transform: rotateX(180deg);
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
   -webkit-transition: all 0.5s ease-in 0s;
   transition: all 0.5s ease-in 0s;
   position: absolute;
@@ -1562,12 +1567,10 @@ input[name="profile"]:focus + .promo__btn, input[name="profile"]:focus-visible +
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #eaeaea8a;
+  background: linear-gradient(1deg, #897ded, #dbd2fa);
   -webkit-box-shadow: 0 0 10px 0 var(--opacity-black);
           box-shadow: 0 0 10px 0 var(--opacity-black);
   border-radius: 50%;
-  -webkit-transform: rotateX(180deg);
-          transform: rotateX(180deg);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1590,18 +1593,17 @@ input[name="profile"]:focus + .promo__btn, input[name="profile"]:focus-visible +
               filter: brightness(1); }
 
 .rotate {
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
-  z-index: 2;
-  width: 250px;
-  height: 250px;
-  border-radius: 50%;
+  position: relative;
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
   -webkit-transition: -webkit-transform 0.3s ease 0s;
   transition: -webkit-transform 0.3s ease 0s;
   transition: transform 0.3s ease 0s;
-  transition: transform 0.3s ease 0s, -webkit-transform 0.3s ease 0s; }
+  transition: transform 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
+  z-index: 2;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%; }
   @media (min-width: 767.98px) {
     .rotate {
       width: 350px;
