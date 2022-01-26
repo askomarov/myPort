@@ -83,20 +83,6 @@ const onBtnClickOpenHelloWindow = () => {
 // let text2 = document.querySelector('.promo-text__decs');
 
 document.addEventListener('DOMContentLoaded', () => {
-  // const typingOptions = {
-  //   strings: [
-  //     "HTML",
-  //     "CSS",
-  //     "JS"
-  //   ],
-  //   typeSpeed: 50,
-  //   backSpeed: 40,
-  //   loop: true,
-  //   loopCount: Infinity
-  // };
-
-  // let typed = new Typed("#typed-promo-text", typingOptions);
-
   page.classList.remove('no-js');
 
   welcome();
@@ -150,9 +136,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const typingOptions = {
     strings: [
-      "HTML",
-      "CSS",
-      "JS"
+      'HTML',
+      'CSS',
+      'JS'
     ],
     typeSpeed: 50,
     backSpeed: 40,
@@ -160,5 +146,5 @@ document.addEventListener('DOMContentLoaded', () => {
     loopCount: Infinity
   };
 
-  let typed = new Typed("#typed-promo-text", typingOptions);
+  let typed = new Typed('#typed-promo-text', typingOptions);
 });
