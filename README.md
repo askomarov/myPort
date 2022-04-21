@@ -4,7 +4,7 @@
 
 - Node.js
 - Gulp
-- npm last version
+- Npm
 
 ## Основные команды для работы
 
@@ -16,3 +16,11 @@
 ## All development is carried out in the directory `source`
 
 ## The resulting code gets into the directory `build`
+
+<!--переводчик  -->
+<!-- alt + t  -->
+привет
+Hey
+<!-- оберуть в тег -->
+<!-- alt + w   -->
+<span>Hello</span>

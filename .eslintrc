@@ -1,11 +1,12 @@
 root: true
 
+parserOptions:
+  ecmaVersion: 2015
+  sourceType: module
+
 env:
   browser: true,
-  es6: true
+  es6: true,
+  commonjs: true
 
-extends:
-  "htmlacademy/es5"
-
-parserOptions:
-  sourceType: module
+extends: "./eslintconfig.js"
