@@ -188,6 +188,7 @@ const mainTasks = gulp.series(sprite, gulp.parallel(copy, html, css, js, images)
 const dev = gulp.series(clean, mainTasks, serverInit);
 const build = gulp.series(clean, mainTasks);
 
+export { build }
 export { deploy }
 export { pugToHtml }
 export { sprite }
